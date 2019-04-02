@@ -7,7 +7,7 @@ import Score from "./Score/Score";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen bg-black">
+    <div className="w-screen h-screen bg-black flex flex-col justify-center">
       <Title />
       <Toggle />
       <Score />
