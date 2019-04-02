@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import Title from "./Title/Title";
 import Toggle from "./Toggle/Toggle";
 import Hint from "./Hint/Hint";
@@ -9,7 +8,7 @@ import Footer from "./Footer/Footer";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="w-screen h-screen bg-black">
       <Title />
       <Toggle />
       <Hint />
