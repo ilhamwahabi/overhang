@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="pb-5 fixed pin-b pin-x text-center">
+    <div className="p-5 fixed pin-b pin-l text-center">
       Made by Ilham Wahabi
     </div>
   );

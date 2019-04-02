@@ -1,5 +1,5 @@
 import React from "react";
-import Field from "../Field/Field";
+import Field from "./Field/Field";
 
 const Hangman = () => {
   const word = "react";
@@ -8,7 +8,7 @@ const Hangman = () => {
     return word.split("").map((letter, index) => <Field key={index} />);
   };
 
-  return <div className="flex mb-12">{renderWordField(word)}</div>;
+  return <div className="flex mb-20">{renderWordField(word)}</div>;
 };
 
 export default Hangman;

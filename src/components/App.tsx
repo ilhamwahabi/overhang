@@ -4,6 +4,7 @@ import Toggle from "./Toggle/Toggle";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import Score from "./Score/Score";
+import Direction from "./Direction/Direction";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Toggle />
       <Score />
       <Main />
+      <Direction />
       <Footer />
     </div>
   );
