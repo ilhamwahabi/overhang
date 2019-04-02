@@ -1,12 +1,9 @@
 import React from "react";
 import Title from "./Title/Title";
 import Toggle from "./Toggle/Toggle";
-import Hint from "./Hint/Hint";
 import Main from "./Main/Main";
-import Direction from "./Direction/Direction";
 import Footer from "./Footer/Footer";
 import Score from "./Score/Score";
-import Chance from "./Chance/Chance";
 
 const App = () => {
   return (
@@ -14,10 +11,7 @@ const App = () => {
       <Title />
       <Toggle />
       <Score />
-      <Hint />
       <Main />
-      <Chance />
-      <Direction />
       <Footer />
     </div>
   );
