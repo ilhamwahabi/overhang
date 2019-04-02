@@ -4,3 +4,21 @@ body {
   font-family: 'Oswald', sans-serif;
   color: #EEF9FF;
 }
+
+.arrow-down {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+
+  50% {
+    transform: translateY(0.5rem);
+  }
+
+  100% {
+    transform: translateY(-0.5rem);
+  }
+}
