@@ -13,10 +13,11 @@
     "typescript": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run tailwind:css && react-scripts start",
+    "build": "npm run tailwind:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tailwind:css": "tailwind build src/tailwind.src.css -c tailwind.js -o src/tailwind.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,5 +27,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "tailwindcss": "^0.7.4"
+  }
 }
