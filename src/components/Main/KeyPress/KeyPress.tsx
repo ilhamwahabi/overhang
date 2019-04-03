@@ -29,11 +29,11 @@ const KeyPress = () => {
       return (
         <p
           className="
-            text-6xl border-red border-b-2 h-32 
+            text-4xl border-red border-b-2 h-32 
             flex justify-center items-center
           "
         >
-          Invalid key
+          invalid key
         </p>
       );
     } else {
