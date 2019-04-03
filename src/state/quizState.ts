@@ -1,17 +1,5 @@
 import { observable, action } from "mobx";
-import { resetGlobalState } from "mobx/lib/internal";
-
-class Quiz {
-  hint: string;
-  options: string[];
-  answer: string;
-
-  constructor(hint: string, options: string[]) {
-    this.hint = hint;
-    this.options = options;
-    this.answer = options[Math.floor(Math.random() * options.length)];
-  }
-}
+import Quiz from "../class/Quiz";
 
 class QuizState {
   @observable
