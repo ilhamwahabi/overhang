@@ -5,7 +5,13 @@ body {
   color: #EEF9FF;
 }
 
+/* OPEN KEYBOARD ARROW */
+
 .arrow-down {
+  transform: translateY(-0.5rem);
+}
+
+.arrow-down:hover {
   animation: bounce 1s ease-in-out infinite;
 }
 
