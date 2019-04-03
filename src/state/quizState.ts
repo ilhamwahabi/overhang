@@ -1,4 +1,4 @@
-import { observable, action } from "mobx";
+import { action, observable } from "mobx";
 import _ from "lodash";
 import Quiz from "../class/Quiz";
 

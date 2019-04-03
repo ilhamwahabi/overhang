@@ -1,4 +1,5 @@
 import React from "react";
+import { quizState } from "../../state/quizState";
 
 const Stage = () => {
   const renderStageDot = (totalStage: number) => {
@@ -13,7 +14,11 @@ const Stage = () => {
       ));
   };
 
-  return <div className="fixed p-l p-y mx-4">{renderStageDot(5)}</div>;
+  return (
+    <div className="fixed p-l p-y mx-4">
+      {renderStageDot(Math.abs(quizState.stage - 5))}
+    </div>
+  );
 };
 
 export default Stage;
