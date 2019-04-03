@@ -1,4 +1,5 @@
 import { observable, action } from "mobx";
+import _ from "lodash";
 import Quiz from "../class/Quiz";
 
 class QuizState {
@@ -19,13 +20,13 @@ class QuizState {
 
   @action
   getQuizzes() {
-    return [
+    return _.shuffle([
       new Quiz("Javascript framework", ["React", "Angular", "Vue"]),
       new Quiz("React core team", ["Dan Abramov"]),
       new Quiz("CSS framework", ["Bootstrap", "Bulma", "Foundation"]),
       new Quiz("Web browser", ["Brave", "Chrome"]),
       new Quiz("Code hosting platform", ["Gitlab", "Github", "Bitbucket"])
-    ];
+    ]);
   }
 
   @action
@@ -42,6 +43,4 @@ class QuizState {
   }
 }
 
-const quizState = new QuizState();
-
-export { quizState };
+export const quizState = new QuizState();
