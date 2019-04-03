@@ -8,7 +8,7 @@ const Hangman = () => {
     return word.split("").map((letter, index) => <Field key={index} />);
   };
 
-  return <div className="flex mb-20">{renderWordField(word)}</div>;
+  return <div className="flex mb-32">{renderWordField(word)}</div>;
 };
 
 export default Hangman;
