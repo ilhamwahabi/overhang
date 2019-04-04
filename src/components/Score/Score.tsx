@@ -1,5 +1,6 @@
 import React from "react";
 import { scoreState } from "../../state/scoreState";
+import { observer } from "mobx-react";
 
 const Score = () => {
   return (
@@ -7,4 +8,4 @@ const Score = () => {
   );
 };
 
-export default Score;
+export default observer(Score);
