@@ -33,7 +33,8 @@ class GuessState {
   resetGuess() {
     this.correctGuess = [];
     this.wrongGuess = [];
-    quizState.levelUp();
+
+    if (quizState.stage < 5) quizState.levelUp();
   }
 }
 

@@ -15,7 +15,7 @@ class QuizState {
   constructor() {
     this.quizzes = this.getQuizzes();
     this.stage = 1;
-    this.currentQuiz = this.quizzes[this.stage];
+    this.currentQuiz = this.quizzes[this.stage - 1];
   }
 
   @action
@@ -32,7 +32,7 @@ class QuizState {
   @action
   levelUp() {
     this.stage++;
-    this.currentQuiz = this.quizzes[this.stage];
+    this.currentQuiz = this.quizzes[this.stage - 1];
   }
 
   @action
