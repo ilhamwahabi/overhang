@@ -3,16 +3,13 @@ import Field from "./Field/Field";
 import { quizState } from "../../../state/quizState";
 
 const Hangman = () => {
-  const renderWordField = (word: string[]) => {
+  const renderWordField = (word: string) => {
     const rows: any[] = [];
 
     if (word.length > 10) {
-      word
-        .join("")
-        .split(" ")
-        .forEach(phrase => rows.push(renderRow(phrase)));
+      word.split(" ").forEach(phrase => rows.push(renderRow(phrase)));
     } else {
-      rows.push(renderRow(word.join("")));
+      rows.push(renderRow(word));
     }
 
     return rows;
@@ -21,14 +18,16 @@ const Hangman = () => {
   const renderRow = (word: string) => {
     const fields = word
       .split("")
-      .map((letter, index) => <Field key={index} isSpace={letter === " "} />);
+      .map((letter, index) => (
+        <Field key={index} isSpace={letter === " "} letter={letter} />
+      ));
 
     return <div className="flex">{fields}</div>;
   };
 
   return (
     <div className="flex flex-col">
-      {renderWordField(quizState.currentQuiz.answer)}
+      {renderWordField(quizState.currentQuiz.answer.join(""))}
     </div>
   );
 };

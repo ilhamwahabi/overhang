@@ -1,25 +1,31 @@
 import { action, observable } from "mobx";
+import { quizState } from "./quizState";
 
 class GuessState {
   @observable
-  guess: string[] = [];
+  correctGuess: string[] = [];
 
   @observable
-  guessedWord: string[] = [];
+  wrongGuess: string[] = [];
 
   @action
-  addGuess(newGuess: string) {
-    this.guess.push(newGuess);
-  }
+  addGuessedLetter(letter: string) {
+    if (quizState.currentQuiz.answer.includes(letter)) {
+      this.correctGuess.push(letter);
+    } else {
+      this.wrongGuess.push(letter);
+    }
 
-  @action
-  fillGuessedWord(letter: string, index: number) {
-    this.guessedWord[index] = letter;
+    console.log(letter);
+    console.log(quizState);
+    console.log(this);
   }
 
   @action
   resetGuess() {
-    this.guessedWord = [];
-    this.guess = [];
+    this.correctGuess = [];
+    this.wrongGuess = [];
   }
 }
+
+export const guessState = new GuessState();
