@@ -2,7 +2,7 @@ import React from "react";
 
 const Field = ({ isSpace }: { isSpace: boolean }) => {
   let classname = `      
-    w-16 h-16 mx-4 border-b-4
+    w-16 h-16 mx-4 mb-10 border-b-4
     flex justify-center align-center 
   `;
 
