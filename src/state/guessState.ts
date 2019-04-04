@@ -15,10 +15,6 @@ class GuessState {
     } else {
       this.wrongGuess.push(letter);
     }
-
-    console.log(letter);
-    console.log(quizState);
-    console.log(this);
   }
 
   @action
