@@ -11,7 +11,7 @@ class ChanceState {
 
   @observable
   decreaseChance() {
-    this.chance--;
+    if (this.chance > 0) this.chance--;
   }
 }
 

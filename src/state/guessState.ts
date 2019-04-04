@@ -1,6 +1,7 @@
 import { action, observable } from "mobx";
 import _ from "lodash";
 import { quizState } from "./quizState";
+import { chanceState } from "./chanceState";
 
 class GuessState {
   @observable
@@ -24,6 +25,7 @@ class GuessState {
       }
     } else {
       this.wrongGuess.push(letter);
+      chanceState.decreaseChance();
     }
   }
 

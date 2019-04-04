@@ -13,7 +13,7 @@ const Chance = () => {
 
   return (
     <div className="fixed pin-r pin-b m-4">
-      {renderBullet(chanceState.chance - guessState.wrongGuess.length)}
+      {renderBullet(chanceState.chance)}
     </div>
   );
 };
