@@ -1,4 +1,5 @@
 import { action, observable } from "mobx";
+import _ from "lodash";
 import { quizState } from "./quizState";
 
 class GuessState {
@@ -12,6 +13,15 @@ class GuessState {
   addGuessedLetter(letter: string) {
     if (quizState.currentQuiz.answer.includes(letter)) {
       this.correctGuess.push(letter);
+
+      const answerLength = _(quizState.currentQuiz.answer)
+        .uniq()
+        .without(" ")
+        .value().length;
+
+      if (this.correctGuess.length === answerLength) {
+        this.resetGuess();
+      }
     } else {
       this.wrongGuess.push(letter);
     }
@@ -21,6 +31,7 @@ class GuessState {
   resetGuess() {
     this.correctGuess = [];
     this.wrongGuess = [];
+    quizState.levelUp();
   }
 }
 

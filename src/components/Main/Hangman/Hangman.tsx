@@ -1,6 +1,7 @@
 import React from "react";
 import Field from "./Field/Field";
 import { quizState } from "../../../state/quizState";
+import { observer } from "mobx-react";
 
 const Hangman = () => {
   const renderWordField = (word: string) => {
@@ -32,4 +33,4 @@ const Hangman = () => {
   );
 };
 
-export default Hangman;
+export default observer(Hangman);
