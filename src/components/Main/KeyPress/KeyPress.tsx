@@ -6,7 +6,8 @@ const KeyPress = () => {
   const onKeyPress = (event: KeyboardEvent) => {
     const loweredKey = event.key.toLowerCase();
 
-    if (loweredKey.match(/[a-z]/)) setKey(loweredKey);
+    if (loweredKey.length === 1 && loweredKey.match(/[a-z]/))
+      setKey(loweredKey);
     else setKey("");
   };
 

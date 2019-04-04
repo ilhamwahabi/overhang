@@ -3,13 +3,16 @@ import Field from "./Field/Field";
 import { quizState } from "../../../state/quizState";
 
 const Hangman = () => {
-  const renderWordField = (word: string) => {
+  const renderWordField = (word: string[]) => {
     const rows: any[] = [];
 
     if (word.length > 10) {
-      word.split(" ").forEach(phrase => rows.push(renderRow(phrase)));
+      word
+        .join("")
+        .split(" ")
+        .forEach(phrase => rows.push(renderRow(phrase)));
     } else {
-      rows.push(renderRow(word));
+      rows.push(renderRow(word.join("")));
     }
 
     return rows;
