@@ -14,7 +14,7 @@ class QuizState {
 
   constructor() {
     this.quizzes = this.getQuizzes();
-    this.stage = 0;
+    this.stage = 1;
     this.currentQuiz = this.quizzes[this.stage];
   }
 
@@ -38,7 +38,7 @@ class QuizState {
   @action
   reset() {
     this.quizzes = this.getQuizzes();
-    this.stage = 0;
+    this.stage = 1;
     this.currentQuiz = this.quizzes[this.stage];
   }
 }
