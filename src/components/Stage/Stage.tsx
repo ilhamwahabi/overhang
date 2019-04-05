@@ -4,7 +4,7 @@ import { observer } from "mobx-react";
 
 const Stage = () => {
   const renderStageDot = (totalStage: number) => {
-    return new Array(totalStage).fill(true).map((el, index) => {
+    return Array.from({ length: totalStage }).map((el, index) => {
       let classname = "border-orange w-4 h-4 my-4";
       classname += index + 1 <= quizState.stage ? " border-8" : " border-2";
 

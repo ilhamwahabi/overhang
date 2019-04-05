@@ -6,9 +6,9 @@ import { observer } from "mobx-react";
 
 const Chance = () => {
   const renderBullet = (totalChance: number) => {
-    return new Array(totalChance)
-      .fill(true)
-      .map((element, index) => <Bullet className="w-12 h-auto" key={index} />);
+    return Array.from({ length: totalChance }).map((element, index) => (
+      <Bullet className="w-12 h-auto" key={index} />
+    ));
   };
 
   return (
