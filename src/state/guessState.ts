@@ -29,7 +29,9 @@ class GuessState {
       }
     } else {
       this.wrongGuess.push(letter);
-      chanceState.decreaseChance();
+
+      if (chanceState.chance === 1) quizState.result = "lose";
+      else if (chanceState.chance > 0) chanceState.decreaseChance();
     }
   }
 
