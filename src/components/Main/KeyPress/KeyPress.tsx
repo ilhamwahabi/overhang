@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { guessState } from "../../../state/guessState";
+import { quizState } from "../../../state/quizState";
 
 const KeyPress = () => {
   const [key, setKey] = useState<string | null>(null);
 
   const onKeyPress = (event: KeyboardEvent) => {
     const loweredKey = event.key.toLowerCase();
+
+    if (quizState.result) return;
 
     if (loweredKey.length === 1 && loweredKey.match(/[a-z]/)) {
       setKey(loweredKey);
