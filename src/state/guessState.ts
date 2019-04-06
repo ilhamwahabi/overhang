@@ -25,8 +25,10 @@ class GuessState {
         .value().length;
 
       if (this.correctGuess.length === answerLength) {
-        this.resetGuess();
-        return true;
+        setTimeout(() => {
+          this.resetGuess();
+          return true;
+        }, 1000);
       }
     } else {
       this.wrongGuess.push(letter);
