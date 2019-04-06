@@ -14,16 +14,19 @@ const Result = () => {
 
   return (
     quizState.result && (
-      <div
-        className="fixed"
-        style={{
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)"
-        }}
-      >
-        <span className="text-8xl">YOU</span> {renderResult(quizState.result)}
-      </div>
+      <>
+        <div
+          className="fixed z-20"
+          style={{
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
+          }}
+        >
+          <span className="text-8xl">YOU</span> {renderResult(quizState.result)}
+        </div>
+        <div className="fixed w-screen h-screen bg-grey-darkest opacity-75 z-10" />
+      </>
     )
   );
 };
