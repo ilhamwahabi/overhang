@@ -7,6 +7,7 @@ import Score from "./Score/Score";
 import Direction from "./Direction/Direction";
 import Stage from "./Stage/Stage";
 import Chance from "./Chance/Chance";
+import Result from "./Result/Result";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Toggle />
       <Score />
       <Main />
+      <Result />
       <Direction />
       <Chance />
       <Footer />

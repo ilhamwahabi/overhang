@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/gsap": "^1.20.2",
     "@types/jest": "24.0.11",
     "@types/lodash": "^4.14.123",
     "@types/node": "11.13.0",
     "@types/react": "16.8.10",
     "@types/react-dom": "16.8.3",
+    "gsap": "^2.1.2",
     "lodash": "^4.17.11",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",

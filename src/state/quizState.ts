@@ -12,9 +12,13 @@ class QuizState {
   @observable
   currentQuiz: Quiz;
 
+  @observable
+  result: "win" | "lose" | null;
+
   constructor() {
     this.quizzes = this.getQuizzes();
     this.stage = 1;
+    this.result = null;
     this.currentQuiz = this.quizzes[this.stage - 1];
   }
 
@@ -39,7 +43,8 @@ class QuizState {
   reset() {
     this.quizzes = this.getQuizzes();
     this.stage = 1;
-    this.currentQuiz = this.quizzes[this.stage];
+    this.result = null;
+    this.currentQuiz = this.quizzes[this.stage - 1];
   }
 }
 

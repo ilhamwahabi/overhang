@@ -5857,6 +5857,10 @@ table {
   font-size: 4rem;
 }
 
+.text-8xl {
+  font-size: 10rem;
+}
+
 .italic {
   font-style: italic;
 }
@@ -11511,6 +11515,10 @@ table {
     font-size: 4rem;
   }
 
+  .sm\:text-8xl {
+    font-size: 10rem;
+  }
+
   .sm\:italic {
     font-style: italic;
   }
@@ -17149,6 +17157,10 @@ table {
 
   .md\:text-6xl {
     font-size: 4rem;
+  }
+
+  .md\:text-8xl {
+    font-size: 10rem;
   }
 
   .md\:italic {
@@ -22791,6 +22803,10 @@ table {
     font-size: 4rem;
   }
 
+  .lg\:text-8xl {
+    font-size: 10rem;
+  }
+
   .lg\:italic {
     font-style: italic;
   }
@@ -28429,6 +28445,10 @@ table {
 
   .xl\:text-6xl {
     font-size: 4rem;
+  }
+
+  .xl\:text-8xl {
+    font-size: 10rem;
   }
 
   .xl\:italic {

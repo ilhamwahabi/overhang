@@ -39,6 +39,7 @@ class GuessState {
     this.wrongGuess = [];
 
     if (quizState.stage < 5) quizState.levelUp();
+    else if (quizState.stage === 5) quizState.result = "win";
   }
 }
 
