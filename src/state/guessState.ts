@@ -33,8 +33,11 @@ class GuessState {
     } else {
       this.wrongGuess.push(letter);
 
-      if (chanceState.chance === 1) quizState.result = "lose";
-      else if (chanceState.chance > 0) chanceState.decreaseChance();
+      if (chanceState.chance === 1)
+        setTimeout(() => {
+          quizState.result = "lose";
+        }, 500);
+      if (chanceState.chance > 0) chanceState.decreaseChance();
     }
     return false;
   }
