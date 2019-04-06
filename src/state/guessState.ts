@@ -12,7 +12,7 @@ class GuessState {
   wrongGuess: string[] = [];
 
   @action
-  addGuessedLetter(letter: string): boolean {
+  addGuessedLetter(letter: string) {
     if (quizState.currentQuiz.answer.includes(letter)) {
       if (!this.correctGuess.includes(letter)) {
         this.correctGuess.push(letter);
@@ -27,8 +27,8 @@ class GuessState {
       if (this.correctGuess.length === answerLength) {
         setTimeout(() => {
           this.resetGuess();
-          return true;
         }, 1000);
+        return true;
       }
     } else {
       this.wrongGuess.push(letter);

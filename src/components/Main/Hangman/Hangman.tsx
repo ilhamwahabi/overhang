@@ -23,7 +23,11 @@ const Hangman = () => {
         <Field key={index} isSpace={letter === " "} letter={letter} />
       ));
 
-    return <div className="flex">{fields}</div>;
+    return (
+      <div className="flex" key={word}>
+        {fields}
+      </div>
+    );
   };
 
   return (

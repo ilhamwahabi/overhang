@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { guessState } from "../../../state/guessState";
-import { quizState } from "../../../state/quizState";
 
 const KeyPress = () => {
   const [key, setKey] = useState<string | null>(null);
@@ -12,8 +11,11 @@ const KeyPress = () => {
       setKey(loweredKey);
 
       const isLevelUp = guessState.addGuessedLetter(loweredKey);
-      if (isLevelUp) setKey(null);
-    } else setKey("");
+      if (isLevelUp)
+        setTimeout(() => {
+          setKey("");
+        }, 1000);
+    } else setKey("invalid");
   };
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const KeyPress = () => {
           Press any key to guess the letter
         </p>
       );
-    } else if (key === "") {
+    } else if (key === "invalid") {
       return (
         <p
           className="
