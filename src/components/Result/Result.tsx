@@ -20,12 +20,16 @@ const Result = () => {
           style={{
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)"
+            transform: "translate(-50%, -50%)",
+            pointerEvents: "none"
           }}
         >
           <span className="text-8xl">YOU</span> {renderResult(quizState.result)}
         </div>
-        <div className="fixed w-screen h-screen bg-grey-darkest opacity-75 z-10" />
+        <div
+          className="fixed w-screen h-screen bg-grey-darkest opacity-75 z-10"
+          onClick={() => quizState.reset()}
+        />
       </>
     )
   );

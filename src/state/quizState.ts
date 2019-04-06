@@ -1,6 +1,7 @@
 import { action, observable } from "mobx";
 import _ from "lodash";
 import Quiz from "../class/Quiz";
+import { chanceState } from "./chanceState";
 
 class QuizState {
   @observable
@@ -45,6 +46,7 @@ class QuizState {
     this.stage = 1;
     this.result = null;
     this.currentQuiz = this.quizzes[this.stage - 1];
+    chanceState.chance = 5;
   }
 }
 
