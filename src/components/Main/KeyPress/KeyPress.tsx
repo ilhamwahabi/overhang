@@ -10,7 +10,9 @@ const KeyPress = () => {
 
     if (loweredKey.length === 1 && loweredKey.match(/[a-z]/)) {
       setKey(loweredKey);
-      guessState.addGuessedLetter(loweredKey);
+
+      const isLevelUp = guessState.addGuessedLetter(loweredKey);
+      if (isLevelUp) setKey(null);
     } else setKey("");
   };
 
@@ -29,7 +31,7 @@ const KeyPress = () => {
           Press any key to guess the letter
         </p>
       );
-    } else if (key == "") {
+    } else if (key === "") {
       return (
         <p
           className="

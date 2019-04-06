@@ -12,7 +12,7 @@ class GuessState {
   wrongGuess: string[] = [];
 
   @action
-  addGuessedLetter(letter: string) {
+  addGuessedLetter(letter: string): boolean {
     if (quizState.currentQuiz.answer.includes(letter)) {
       if (!this.correctGuess.includes(letter)) {
         this.correctGuess.push(letter);
@@ -26,6 +26,7 @@ class GuessState {
 
       if (this.correctGuess.length === answerLength) {
         this.resetGuess();
+        return true;
       }
     } else {
       this.wrongGuess.push(letter);
@@ -33,6 +34,7 @@ class GuessState {
       if (chanceState.chance === 1) quizState.result = "lose";
       else if (chanceState.chance > 0) chanceState.decreaseChance();
     }
+    return false;
   }
 
   @action
