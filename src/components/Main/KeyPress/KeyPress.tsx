@@ -13,11 +13,16 @@ const KeyPress = () => {
     if (loweredKey.length === 1 && loweredKey.match(/[a-z]/)) {
       setKey(loweredKey);
 
-      const isLevelUp = guessState.addGuessedLetter(loweredKey);
-      if (isLevelUp)
+      const condition = guessState.addGuessedLetter(loweredKey);
+      if (condition === "levelup")
         setTimeout(() => {
           setKey("");
         }, 1000);
+      else if (condition === "lose") {
+        setTimeout(() => {
+          setKey(null);
+        }, 500);
+      }
     } else setKey("invalid");
   };
 

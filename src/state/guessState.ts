@@ -12,7 +12,7 @@ class GuessState {
   wrongGuess: string[] = [];
 
   @action
-  addGuessedLetter(letter: string) {
+  addGuessedLetter(letter: string): "levelup" | "lose" | "" {
     if (quizState.currentQuiz.answer.includes(letter)) {
       if (!this.correctGuess.includes(letter)) {
         this.correctGuess.push(letter);
@@ -28,18 +28,21 @@ class GuessState {
         setTimeout(() => {
           this.resetGuess();
         }, 1000);
-        return true;
+        return "levelup";
       }
     } else {
       this.wrongGuess.push(letter);
 
-      if (chanceState.chance === 1)
+      if (chanceState.chance === 1) {
         setTimeout(() => {
           quizState.result = "lose";
         }, 500);
+        chanceState.decreaseChance();
+        return "lose";
+      }
       if (chanceState.chance > 0) chanceState.decreaseChance();
     }
-    return false;
+    return "";
   }
 
   @action
