@@ -4,8 +4,8 @@ import { ReactComponent as Moon } from "../../svg/moon.svg";
 
 const Toggle = () => {
   return (
-    <div className="fixed pin-y pin-r flex flex-col justify-center p-4">
-      <Sun className="w-8 cursor-pointer mb-4" />
+    <div className="fixed pin-t pin-r p-4">
+      <Sun className="w-8 cursor-pointer mr-4" />
       <Moon className="w-8 cursor-pointer" />
     </div>
   );
