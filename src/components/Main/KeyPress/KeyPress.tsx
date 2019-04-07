@@ -20,7 +20,7 @@ const KeyPress = () => {
         }, 1000);
       else if (condition === "lose") {
         setTimeout(() => {
-          setKey(null);
+          setKey("");
         }, 500);
       }
     } else setKey("invalid");

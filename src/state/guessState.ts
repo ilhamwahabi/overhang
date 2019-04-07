@@ -2,7 +2,6 @@ import { action, observable } from "mobx";
 import _ from "lodash";
 import { quizState } from "./quizState";
 import { chanceState } from "./chanceState";
-import { scoreState } from "./scoreState";
 
 class GuessState {
   @observable
@@ -16,7 +15,6 @@ class GuessState {
     if (quizState.currentQuiz.answer.includes(letter)) {
       if (!this.correctGuess.includes(letter)) {
         this.correctGuess.push(letter);
-        scoreState.addScore(20);
       }
 
       const answerLength = _(quizState.currentQuiz.answer)

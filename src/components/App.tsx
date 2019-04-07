@@ -3,7 +3,6 @@ import Title from "./Title/Title";
 import Toggle from "./Toggle/Toggle";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
-import Score from "./Score/Score";
 import Direction from "./Direction/Direction";
 import Stage from "./Stage/Stage";
 import Chance from "./Chance/Chance";
@@ -15,7 +14,6 @@ const App = () => {
       <Title />
       <Stage />
       <Toggle />
-      <Score />
       <Main />
       <Result />
       <Direction />
