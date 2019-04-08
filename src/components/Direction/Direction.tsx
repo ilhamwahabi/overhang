@@ -5,7 +5,7 @@ const Direction = () => {
   return (
     <div className="flex flex-col items-center justify-center fixed pin-b pin-x mb-4">
       <p className="mb-4">Open Virtual Keyboard</p>
-      <DownArrow className="w-6 h-auto cursor-pointer arrow-down" />
+      <DownArrow className="w-6 h-auto cursor-pointer" />
     </div>
   );
 };
