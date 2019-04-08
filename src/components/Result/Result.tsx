@@ -16,12 +16,14 @@ const Result = () => {
             WIN
           </span>
         );
+        break;
       case "lose":
         resultComponent = (
           <span className="text-8xl text-red inline-block" ref={resultText}>
             LOSE
           </span>
         );
+        break;
     }
 
     return (
@@ -35,6 +37,19 @@ const Result = () => {
         {resultComponent}
       </Anime>
     );
+  };
+
+  const getBackdropClassname = (result: "lose" | "win") => {
+    let backdropClassname = "fixed w-screen h-screen opacity-75 z-10";
+    switch (quizState.result) {
+      case "win":
+        backdropClassname += " bg-blue-darkest";
+        break;
+      case "lose":
+        backdropClassname += " bg-red-darkest";
+        break;
+    }
+    return backdropClassname;
   };
 
   return (
@@ -62,7 +77,7 @@ const Result = () => {
           {renderResult(quizState.result)}
         </div>
         <div
-          className="fixed w-screen h-screen bg-grey-darkest opacity-75 z-10"
+          className={getBackdropClassname(quizState.result)}
           onClick={() => quizState.reset()}
         />
       </>
