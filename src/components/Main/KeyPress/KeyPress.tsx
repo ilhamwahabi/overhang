@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { observer } from "mobx-react-lite";
 import { guessState } from "../../../state/guessState";
 import { quizState } from "../../../state/quizState";
 
@@ -34,7 +35,21 @@ const KeyPress = () => {
     };
   }, []);
 
-  const renderText = () => {
+  const renderText = (status: "correct" | "wrong" | null) => {
+    let keyClassname = `
+      border-b-2 w-32 h-32 
+      text-6xl align-middle
+      flex justify-center items-center
+    `;
+    switch (status) {
+      case "correct":
+        keyClassname += " border-orange";
+        break;
+      case "wrong":
+        keyClassname += " border-red";
+        break;
+    }
+
     if (key === null) {
       return (
         <p className="text-2xl h-32 flex justify-center items-center">
@@ -53,22 +68,11 @@ const KeyPress = () => {
         </p>
       );
     } else {
-      return (
-        <p
-          className="
-            border-orange border-b-2 
-            w-32 h-32 
-            text-6xl align-middle
-            flex justify-center items-center
-          "
-        >
-          {key}
-        </p>
-      );
+      return <p className={keyClassname}>{key}</p>;
     }
   };
 
-  return <div>{renderText()}</div>;
+  return <div>{renderText(guessState.guessStatus)}</div>;
 };
 
-export default KeyPress;
+export default observer(KeyPress);

@@ -10,6 +10,9 @@ class GuessState {
   @observable
   wrongGuess: string[] = [];
 
+  @observable
+  guessStatus: "correct" | "wrong" | null = null;
+
   @action
   addGuessedLetter(letter: string): "levelup" | "lose" | "" {
     const answer = _(quizState.currentQuiz.answer)
@@ -18,6 +21,7 @@ class GuessState {
       .value();
 
     if (quizState.currentQuiz.answer.includes(letter)) {
+      this.guessStatus = "correct";
       if (!this.correctGuess.includes(letter)) {
         this.correctGuess.push(letter);
       }
@@ -32,6 +36,7 @@ class GuessState {
         return "levelup";
       }
     } else {
+      this.guessStatus = "wrong";
       if (!this.wrongGuess.includes(letter)) {
         this.wrongGuess.push(letter);
 
@@ -57,6 +62,7 @@ class GuessState {
   resetGuess() {
     this.correctGuess = [];
     this.wrongGuess = [];
+    this.guessStatus = null;
   }
 }
 
