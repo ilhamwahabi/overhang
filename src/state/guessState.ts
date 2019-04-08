@@ -32,21 +32,23 @@ class GuessState {
         return "levelup";
       }
     } else {
-      this.wrongGuess.push(letter);
+      if (!this.wrongGuess.includes(letter)) {
+        this.wrongGuess.push(letter);
 
-      if (chanceState.chance === 1) {
-        setTimeout(() => {
-          this.correctGuess = [...answer];
-        }, 250);
+        if (chanceState.chance === 1) {
+          setTimeout(() => {
+            this.correctGuess = [...answer];
+          }, 250);
 
-        setTimeout(() => {
-          quizState.result = "lose";
-          this.resetGuess();
-        }, 1000);
-        chanceState.decreaseChance();
-        return "lose";
+          setTimeout(() => {
+            quizState.result = "lose";
+            this.resetGuess();
+          }, 1000);
+          chanceState.decreaseChance();
+          return "lose";
+        }
+        if (chanceState.chance > 0) chanceState.decreaseChance();
       }
-      if (chanceState.chance > 0) chanceState.decreaseChance();
     }
     return "";
   }
