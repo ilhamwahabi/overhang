@@ -34,6 +34,9 @@ class GuessState {
       if (chanceState.chance === 1) {
         setTimeout(() => {
           quizState.result = "lose";
+          this.correctGuess = [];
+          this.wrongGuess = [];
+          // this.resetGuess();
         }, 500);
         chanceState.decreaseChance();
         return "lose";
