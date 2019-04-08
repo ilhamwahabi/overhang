@@ -1,7 +1,8 @@
 import React from "react";
+import { observer } from "mobx-react-lite";
+
 import Field from "./Field/Field";
 import { quizState } from "../../../state/quizState";
-import { observer } from "mobx-react";
 
 const Hangman = () => {
   const renderWordField = (word: string) => {

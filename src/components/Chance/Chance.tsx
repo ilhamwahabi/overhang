@@ -1,6 +1,6 @@
 import React from "react";
 import FlipMove from "react-flip-move";
-import { observer } from "mobx-react";
+import { observer } from "mobx-react-lite";
 
 import { ReactComponent as Bullet } from "../../svg/bullet.svg";
 import { chanceState } from "../../state/chanceState";

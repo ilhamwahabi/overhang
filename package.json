@@ -12,7 +12,6 @@
     "classnames": "^2.2.6",
     "lodash": "^4.17.11",
     "mobx": "^5.9.4",
-    "mobx-react": "^5.4.3",
     "mobx-react-lite": "^1.2.0",
     "react": "^16.8.6",
     "react-anime": "^2.2.0",
