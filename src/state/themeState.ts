@@ -2,10 +2,10 @@ import { action, observable } from "mobx";
 
 class ThemeState {
   @observable
-  theme: string = "dark";
+  theme: "light" | "dark" = "dark";
 
   @action
-  changeTheme(theme: string) {
+  changeTheme(theme: "light" | "dark") {
     this.theme = theme;
   }
 }

@@ -1,27 +1,20 @@
-import React, { useRef } from "react";
+import React from "react";
 import { observer } from "mobx-react-lite";
 import { quizState } from "../../state/quizState";
 import Anime from "react-anime";
 
 const Result = () => {
-  const youText = useRef(null);
-  const resultText = useRef(null);
-
   const renderResult = (result: "win" | "lose" | null) => {
     let resultComponent;
     switch (result) {
       case "win":
         resultComponent = (
-          <span className="text-8xl text-blue inline-block" ref={resultText}>
-            WIN
-          </span>
+          <span className="text-8xl text-blue inline-block">WIN</span>
         );
         break;
       case "lose":
         resultComponent = (
-          <span className="text-8xl text-red inline-block" ref={resultText}>
-            LOSE
-          </span>
+          <span className="text-8xl text-red inline-block">LOSE</span>
         );
         break;
     }
@@ -70,9 +63,7 @@ const Result = () => {
             direction="normal"
             translateY={["-100vh", "0"]}
           >
-            <span className="text-8xl inline-block" ref={youText}>
-              YOU
-            </span>
+            <span className="text-8xl inline-block">YOU</span>
           </Anime>{" "}
           {renderResult(quizState.result)}
         </div>
