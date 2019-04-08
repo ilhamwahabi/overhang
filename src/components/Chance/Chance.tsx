@@ -1,8 +1,9 @@
 import React from "react";
+import FlipMove from "react-flip-move";
+import { observer } from "mobx-react";
+
 import { ReactComponent as Bullet } from "../../svg/bullet.svg";
 import { chanceState } from "../../state/chanceState";
-import { guessState } from "../../state/guessState";
-import { observer } from "mobx-react";
 
 const Chance = () => {
   const renderBullet = (totalChance: number) => {
@@ -13,7 +14,7 @@ const Chance = () => {
 
   return (
     <div className="fixed pin-r pin-b m-4">
-      {renderBullet(chanceState.chance)}
+      <FlipMove>{renderBullet(chanceState.chance)}</FlipMove>
     </div>
   );
 };

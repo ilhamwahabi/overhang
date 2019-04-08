@@ -16,6 +16,7 @@
     "react": "^16.8.6",
     "react-anime": "^2.2.0",
     "react-dom": "^16.8.6",
+    "react-flip-move": "^3.0.3",
     "react-scripts": "2.1.8",
     "typescript": "3.4.1"
   },
