@@ -3,12 +3,15 @@ import { observer } from "mobx-react-lite";
 import SimpleKeyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 
-import { themeState } from "../../state/themeState";
-
 const Keyboard = () => {
+  const onKeyPress = (button: any) => {
+    document.dispatchEvent(new KeyboardEvent("keypress", { key: button }));
+  };
+
   return (
     <div className="w-1/2 mt-5">
       <SimpleKeyboard
+        onKeyPress={onKeyPress}
         buttonTheme={[
           {
             class: `text-black`,
