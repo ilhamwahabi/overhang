@@ -11,8 +11,6 @@ import Stage from "./Stage/Stage";
 import Chance from "./Chance/Chance";
 import Result from "./Result/Result";
 import { themeState } from "../state/themeState";
-import Keyboard from "./Keyboard/Keyboard";
-import { keyboardState } from "../state/keyboardState";
 
 const App = () => {
   return (
@@ -34,7 +32,6 @@ const App = () => {
       <Direction />
       <Chance />
       <Footer />
-      {keyboardState.isOpen && <Keyboard />}
     </div>
   );
 };

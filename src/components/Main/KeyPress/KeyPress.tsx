@@ -5,6 +5,7 @@ import cx from "classnames";
 import { guessState } from "../../../state/guessState";
 import { quizState } from "../../../state/quizState";
 import { themeState } from "../../../state/themeState";
+import { keyboardState } from "../../../state/keyboardState";
 
 const KeyPress = () => {
   const [key, setKey] = useState<string | null>(null);
@@ -95,7 +96,9 @@ const KeyPress = () => {
     }
   };
 
-  return <div>{renderText(guessState.guessStatus)}</div>;
+  return keyboardState.isOpen ? null : (
+    <div>{renderText(guessState.guessStatus)}</div>
+  );
 };
 
 export default observer(KeyPress);

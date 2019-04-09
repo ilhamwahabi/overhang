@@ -11,7 +11,7 @@ const Direction = () => {
     keyboardState.toggle();
   }
 
-  return (
+  return keyboardState.isOpen ? null : (
     <div className="flex flex-col items-center justify-center fixed pin-b pin-x mb-4">
       <p className={cx("mb-4", `text-${themeState.secondary}`)}>
         Open Virtual Keyboard
