@@ -1,16 +1,23 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import FlipMove from "react-flip-move";
+import cx from "classnames";
 
 import { quizState } from "../../state/quizState";
+import { themeState } from "../../state/themeState";
 
 const Stage = () => {
   const renderStageDot = () => {
     return Array.from({ length: 5 - quizState.stage }).map((el, index) => {
-      let classname = "border-orange w-4 h-4 my-4 border-2";
       return (
         <div
-          className={classname}
+          className={cx(
+            `border-${themeState.tertiary}`,
+            "w-4",
+            "h-4",
+            "my-4",
+            "border-2"
+          )}
           style={{ borderRadius: "50%" }}
           key={index}
         />
@@ -20,10 +27,15 @@ const Stage = () => {
 
   const renderFinishedStage = () => {
     return Array.from({ length: quizState.stage }).map((el, index) => {
-      let classname = "border-orange w-4 h-4 my-4 border-8";
       return (
         <div
-          className={classname}
+          className={cx(
+            `border-${themeState.tertiary}`,
+            "w-4",
+            "h-4",
+            "my-4",
+            "border-8"
+          )}
           style={{ borderRadius: "50%" }}
           key={index}
         />

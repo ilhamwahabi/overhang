@@ -25,7 +25,7 @@ const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
         "justify-center",
         "align-center",
         "text-5xl",
-        { "border-orange": !isSpace },
+        { [`border-${themeState.tertiary}`]: !isSpace },
         { "border-transparent": isSpace },
         `text-${themeState.secondary}`
       )}

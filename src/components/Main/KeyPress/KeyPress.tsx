@@ -84,7 +84,7 @@ const KeyPress = () => {
             "justify-center",
             "items-center",
             `border-${themeState.secondary}`,
-            { "border-orange": status === "correct" },
+            { [`border-${themeState.tertiary}`]: status === "correct" },
             { "border-red": status === "wrong" },
             `text-${themeState.secondary}`
           )}

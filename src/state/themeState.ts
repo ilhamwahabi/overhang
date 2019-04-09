@@ -28,6 +28,16 @@ class ThemeState {
         return "white";
     }
   }
+
+  @computed
+  get tertiary() {
+    switch (this.theme) {
+      case "light":
+        return "blue-dark";
+      case "dark":
+        return "orange";
+    }
+  }
 }
 
 export const themeState = new ThemeState();
