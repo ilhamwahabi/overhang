@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import { observer } from "mobx-react-lite";
 
 import { ReactComponent as DownArrow } from "../../svg/arrow.svg";
 import { themeState } from "../../state/themeState";
@@ -10,9 +11,16 @@ const Direction = () => {
       <p className={cx("mb-4", `text-${themeState.secondary}`)}>
         Open Virtual Keyboard
       </p>
-      <DownArrow className="w-6 h-auto cursor-pointer" />
+      <DownArrow
+        className={cx(
+          "w-6",
+          "h-auto",
+          "cursor-pointer",
+          `arrow-${themeState.tertiary}`
+        )}
+      />
     </div>
   );
 };
 
-export default Direction;
+export default observer(Direction);

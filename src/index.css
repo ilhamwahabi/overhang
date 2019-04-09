@@ -4,3 +4,7 @@ body {
   font-family: 'Oswald', sans-serif;
   color: #EEF9FF;
 }
+
+.arrow-blue-dark * {
+  fill: #2779bd;
+}
