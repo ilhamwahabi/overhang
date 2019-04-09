@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
+import cx from "classnames";
 
 import { guessState } from "../../../state/guessState";
 import { quizState } from "../../../state/quizState";
+import { themeState } from "../../../state/themeState";
 
 const KeyPress = () => {
   const [key, setKey] = useState<string | null>(null);
@@ -37,39 +39,59 @@ const KeyPress = () => {
   }, []);
 
   const renderText = (status: "correct" | "wrong" | null) => {
-    let keyClassname = `
-      border-b-2 w-32 h-32 
-      text-6xl align-middle
-      flex justify-center items-center
-    `;
-    switch (status) {
-      case "correct":
-        keyClassname += " border-orange";
-        break;
-      case "wrong":
-        keyClassname += " border-red";
-        break;
-    }
-
     if (key === null) {
       return (
-        <p className="text-2xl h-32 flex justify-center items-center">
+        <p
+          className={cx(
+            "text-2xl",
+            "h-32",
+            "flex",
+            "justify-center",
+            "items-center",
+            `text-${themeState.secondary}`
+          )}
+        >
           Press any key to guess the letter
         </p>
       );
     } else if (key === "invalid") {
       return (
         <p
-          className="
-            text-4xl border-red border-b-2 h-32 
-            flex justify-center items-center
-          "
+          className={cx(
+            "text-4xl",
+            "border-red",
+            "border-b-2",
+            "h-32",
+            "flex",
+            "justify-center",
+            "items-center",
+            `text-${themeState.secondary}`
+          )}
         >
           invalid key
         </p>
       );
     } else {
-      return <p className={keyClassname}>{key}</p>;
+      return (
+        <p
+          className={cx(
+            "border-b-2",
+            "w-32",
+            "h-32",
+            "text-6xl",
+            "align-middle",
+            "flex",
+            "justify-center",
+            "items-center",
+            `border-${themeState.secondary}`,
+            { "border-orange": status === "correct" },
+            { "border-red": status === "wrong" },
+            `text-${themeState.secondary}`
+          )}
+        >
+          {key}
+        </p>
+      );
     }
   };
 

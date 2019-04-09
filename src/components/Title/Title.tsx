@@ -1,7 +1,24 @@
 import React from "react";
+import { observer } from "mobx-react-lite";
+import cx from "classnames";
+
+import { themeState } from "../../state/themeState";
 
 const Title = () => {
-  return <div className="text-3xl p-4 fixed pin-t pin-l">Over Hangman</div>;
+  return (
+    <div
+      className={cx(
+        "text-3xl",
+        "p-4",
+        "fixed",
+        "pin-t",
+        "pin-l",
+        `text-${themeState.secondary}`
+      )}
+    >
+      Over Hangman
+    </div>
+  );
 };
 
-export default Title;
+export default observer(Title);

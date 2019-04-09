@@ -18,6 +18,16 @@ class ThemeState {
         return "black";
     }
   }
+
+  @computed
+  get secondary() {
+    switch (this.theme) {
+      case "light":
+        return "black";
+      case "dark":
+        return "white";
+    }
+  }
 }
 
 export const themeState = new ThemeState();
