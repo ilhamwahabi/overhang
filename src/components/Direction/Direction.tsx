@@ -11,13 +11,18 @@ const Direction = () => {
     keyboardState.toggle();
   }
 
-  return keyboardState.isOpen ? null : (
+  return (
     <div className="flex flex-col items-center justify-center fixed pin-b pin-x mb-4">
       <p className={cx("mb-4", `text-${themeState.secondary}`)}>
-        Open Virtual Keyboard
+        {keyboardState.isOpen
+          ? "Close Virtual Keyboard"
+          : "Open Virtual Keyboard"}
       </p>
       <DownArrow
         onClick={openKeyboard}
+        style={{
+          transform: keyboardState.isOpen ? "rotate(0deg)" : "rotate(180deg)"
+        }}
         className={cx(
           "w-6",
           "h-auto",
