@@ -2,14 +2,22 @@ import React from "react";
 import FlipMove from "react-flip-move";
 import { observer } from "mobx-react-lite";
 
-import { ReactComponent as Bullet } from "../../svg/bullet.svg";
+import { ReactComponent as OrangeBullet } from "../../svg/bullet.svg";
+import { ReactComponent as BlueBullet } from "../../svg/bullet-blue.svg";
+
 import { chanceState } from "../../state/chanceState";
+import { themeState } from "../../state/themeState";
 
 const Chance = () => {
   const renderBullet = (totalChance: number) => {
-    return Array.from({ length: totalChance }).map((element, index) => (
-      <Bullet className="w-12 h-auto" key={index} />
-    ));
+    return Array.from({ length: totalChance }).map((element, index) => {
+      switch (themeState.theme) {
+        case "dark":
+          return <OrangeBullet className="w-12 h-auto" key={index} />;
+        case "light":
+          return <BlueBullet className="w-12 h-auto" key={index} />;
+      }
+    });
   };
 
   return (
