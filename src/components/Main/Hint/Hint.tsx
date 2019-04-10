@@ -7,7 +7,14 @@ import { themeState } from "../../../state/themeState";
 
 const Hint = () => {
   return (
-    <div className={cx("text-4xl", "mb-24", `text-${themeState.secondary}`)}>
+    <div
+      className={cx(
+        "text-3xl",
+        "md:text-4xl",
+        "mb-24",
+        `text-${themeState.secondary}`
+      )}
+    >
       {quizState.currentQuiz.hint}
     </div>
   );

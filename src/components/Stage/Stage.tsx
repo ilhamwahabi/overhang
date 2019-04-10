@@ -13,8 +13,10 @@ const Stage = () => {
         <div
           className={cx(
             `border-${themeState.tertiary}`,
-            "w-4",
-            "h-4",
+            "w-2",
+            "h-2",
+            "md:w-4",
+            "md:h-4",
             "my-4",
             "border-2"
           )}
@@ -31,10 +33,13 @@ const Stage = () => {
         <div
           className={cx(
             `border-${themeState.tertiary}`,
-            "w-4",
-            "h-4",
+            "w-2",
+            "h-2",
+            "md:w-4",
+            "md:h-4",
             "my-4",
-            "border-8"
+            "border-4",
+            "md:border-8"
           )}
           style={{ borderRadius: "50%" }}
           key={index}

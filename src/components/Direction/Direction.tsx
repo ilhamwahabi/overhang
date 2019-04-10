@@ -12,8 +12,13 @@ const Direction = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center fixed pin-b pin-x mb-4">
-      <p className={cx("mb-4", `text-${themeState.secondary}`)}>
+    <div className="flex flex-col items-center justify-center fixed pin-b pin-x mb-16 md:mb-4">
+      <p
+        className={cx(
+          "text-sm md:text-base mb-2 md:mb-4",
+          `text-${themeState.secondary}`
+        )}
+      >
         {keyboardState.isOpen
           ? "Close Virtual Keyboard"
           : "Open Virtual Keyboard"}
@@ -24,7 +29,8 @@ const Direction = () => {
           transform: keyboardState.isOpen ? "rotate(0deg)" : "rotate(180deg)"
         }}
         className={cx(
-          "w-6",
+          "w-4",
+          "md:w-6",
           "h-auto",
           "cursor-pointer",
           `arrow-${themeState.tertiary}`

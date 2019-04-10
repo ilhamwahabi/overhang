@@ -44,7 +44,8 @@ const KeyPress = () => {
       return (
         <p
           className={cx(
-            "text-2xl",
+            "text-base",
+            "md:text-2xl",
             "h-32",
             "flex",
             "justify-center",
@@ -59,10 +60,12 @@ const KeyPress = () => {
       return (
         <p
           className={cx(
-            "text-4xl",
+            "text-2xl",
+            "md:text-4xl",
             "border-red",
             "border-b-2",
-            "h-32",
+            "h-16",
+            "md:h-32",
             "flex",
             "justify-center",
             "items-center",
@@ -77,9 +80,12 @@ const KeyPress = () => {
         <p
           className={cx(
             "border-b-2",
-            "w-32",
-            "h-32",
-            "text-6xl",
+            "w-16",
+            "h-16",
+            "md:w-32",
+            "md:h-32",
+            "text-4xl",
+            "md:text-6xl",
             "align-middle",
             "flex",
             "justify-center",

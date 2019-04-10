@@ -13,9 +13,9 @@ const Chance = () => {
     return Array.from({ length: totalChance }).map((element, index) => {
       switch (themeState.theme) {
         case "dark":
-          return <OrangeBullet className="w-12 h-auto" key={index} />;
+          return <OrangeBullet className="md:w-12 w-6 h-auto" key={index} />;
         case "light":
-          return <BlueBullet className="w-12 h-auto" key={index} />;
+          return <BlueBullet className="md:w-12 w-6 h-auto" key={index} />;
       }
     });
   };

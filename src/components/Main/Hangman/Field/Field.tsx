@@ -15,16 +15,20 @@ const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
   return (
     <div
       className={cx(
-        "w-16",
-        "h-16",
-        "mx-4",
+        "w-3",
+        "h-8",
+        "md:w-16",
+        "md:h-16",
+        "mx-2",
+        "md:mx-4",
         "mb-10",
         "border-b-4",
         "pb-2",
         "flex",
         "justify-center",
         "align-center",
-        "text-5xl",
+        "text-xl",
+        "md:text-5xl",
         { [`border-${themeState.tertiary}`]: !isSpace },
         { "border-transparent": isSpace },
         `text-${themeState.secondary}`

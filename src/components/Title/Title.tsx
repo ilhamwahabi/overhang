@@ -8,7 +8,8 @@ const Title = () => {
   return (
     <div
       className={cx(
-        "text-3xl",
+        "text-2xl",
+        "md:text-3xl",
         "p-4",
         "fixed",
         "pin-t",
