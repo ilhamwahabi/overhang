@@ -12,7 +12,7 @@ const Direction = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center fixed pin-b pin-x mb-16 md:mb-4">
+    <div className="flex flex-col items-center justify-center fixed pin-b pin-x mb-12 md:mb-4">
       <p
         className={cx(
           "text-sm md:text-base mb-2 md:mb-4",

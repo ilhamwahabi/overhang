@@ -2,7 +2,15 @@
 
 Web-based hangman game with extra features.
 
-My purpose to made this game is for summer 2019 internship preparations which I will use React, also for learning React hooks, Typescript in React, Mobx, TailwindCSS, Lodash, SVG, Yarn, etc.
+For summer 2019 internship preparations purpose which I will use React.
+
+Also for learning:
+
+- React + Typescript and SVG for component
+- React hooks, all components here is functional component
+- Mobx for state management
+- TailwindCSS for styling
+- Now for deploy
 
 ## Usage
 
