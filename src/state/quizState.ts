@@ -2,6 +2,7 @@ import { action, observable } from "mobx";
 import _ from "lodash";
 import Quiz from "../class/Quiz";
 import { chanceState } from "./chanceState";
+import { quiz } from "../data/quiz";
 
 class QuizState {
   @observable
@@ -25,13 +26,11 @@ class QuizState {
 
   @action
   getQuizzes() {
-    return _.shuffle([
-      new Quiz("Javascript framework", ["React", "Angular", "Vue"]),
-      new Quiz("React core team", ["Dan Abramov"]),
-      new Quiz("CSS framework", ["Bootstrap", "Bulma", "Foundation"]),
-      new Quiz("Web browser", ["Brave", "Chrome"]),
-      new Quiz("Code hosting platform", ["Gitlab", "Github", "Bitbucket"])
-    ]);
+    return _(quiz)
+      .shuffle()
+      .take(5)
+      .value()
+      .map(({ hint, answers }) => new Quiz(hint, answers));
   }
 
   @action
