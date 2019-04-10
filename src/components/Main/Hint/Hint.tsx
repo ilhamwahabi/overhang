@@ -11,7 +11,8 @@ const Hint = () => {
       className={cx(
         "text-3xl",
         "md:text-4xl",
-        "mb-24",
+        "mb-16",
+        "md:mb-24",
         `text-${themeState.secondary}`
       )}
     >

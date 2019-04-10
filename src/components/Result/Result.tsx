@@ -9,12 +9,16 @@ const Result = () => {
     switch (result) {
       case "win":
         resultComponent = (
-          <span className="text-8xl text-blue inline-block">WIN</span>
+          <span className="text-5xl md:text-8xl text-blue inline-block">
+            WIN
+          </span>
         );
         break;
       case "lose":
         resultComponent = (
-          <span className="text-8xl text-red inline-block">LOSE</span>
+          <span className="text-5xl md:text-8xl text-red inline-block">
+            LOSE
+          </span>
         );
         break;
     }
@@ -49,7 +53,7 @@ const Result = () => {
     quizState.result && (
       <>
         <div
-          className="fixed z-20"
+          className="fixed z-20 text-center"
           style={{
             top: "50%",
             left: "50%",
@@ -63,7 +67,7 @@ const Result = () => {
             direction="normal"
             translateY={["-100vh", "0"]}
           >
-            <span className="text-8xl inline-block">YOU</span>
+            <span className="text-5xl md:text-8xl inline-block">YOU</span>
           </Anime>{" "}
           {renderResult(quizState.result)}
         </div>
