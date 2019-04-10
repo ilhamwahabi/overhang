@@ -13,12 +13,17 @@ class GuessState {
   @observable
   guessStatus: "correct" | "wrong" | null = null;
 
+  @observable
+  isChecking: boolean = false;
+
   @action
   addGuessedLetter(letter: string): "levelup" | "lose" | "" {
     const answer = _(quizState.currentQuiz.answer)
       .uniq()
       .without(" ")
       .value();
+
+    this.isChecking = true;
 
     if (quizState.currentQuiz.answer.includes(letter)) {
       this.guessStatus = "correct";
@@ -32,6 +37,7 @@ class GuessState {
 
           if (quizState.stage < 5) quizState.levelUp();
           else if (quizState.stage === 5) quizState.result = "win";
+          this.isChecking = false;
         }, 1000);
         return "levelup";
       }
@@ -47,6 +53,7 @@ class GuessState {
 
           setTimeout(() => {
             quizState.result = "lose";
+            this.isChecking = false;
             this.resetGuess();
           }, 1000);
           chanceState.decreaseChance();
@@ -55,6 +62,9 @@ class GuessState {
         if (chanceState.chance > 0) chanceState.decreaseChance();
       }
     }
+
+    this.isChecking = false;
+
     return "";
   }
 

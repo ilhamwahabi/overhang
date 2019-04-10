@@ -14,6 +14,7 @@ const KeyPress = () => {
     const loweredKey = event.key.toLowerCase();
 
     if (quizState.result) return;
+    if (guessState.isChecking) return;
 
     if (loweredKey.length === 1 && loweredKey.match(/[a-z]/)) {
       setKey(loweredKey);
