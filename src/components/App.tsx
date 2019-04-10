@@ -2,14 +2,14 @@ import React from "react";
 import cx from "classnames";
 import { observer } from "mobx-react-lite";
 
-import Title from "./Title/Title";
-import Toggle from "./Toggle/Toggle";
+import Title from "./Title";
+import Toggle from "./Toggle";
 import Main from "./Main/Main";
-import Footer from "./Footer/Footer";
-import Direction from "./Direction/Direction";
-import Stage from "./Stage/Stage";
-import Chance from "./Chance/Chance";
-import Result from "./Result/Result";
+import Footer from "./Footer";
+import Direction from "./Direction";
+import Stage from "./Stage";
+import Chance from "./Chance";
+import Result from "./Result";
 import { themeState } from "../state/themeState";
 
 const App = () => {

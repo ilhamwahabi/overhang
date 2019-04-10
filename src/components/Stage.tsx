@@ -3,8 +3,8 @@ import { observer } from "mobx-react-lite";
 import FlipMove from "react-flip-move";
 import cx from "classnames";
 
-import { quizState } from "../../state/quizState";
-import { themeState } from "../../state/themeState";
+import { quizState } from "../state/quizState";
+import { themeState } from "../state/themeState";
 
 const Stage = () => {
   const renderStageDot = () => {

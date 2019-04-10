@@ -2,9 +2,9 @@ import React from "react";
 import cx from "classnames";
 import { observer } from "mobx-react-lite";
 
-import { ReactComponent as DownArrow } from "../../svg/arrow.svg";
-import { themeState } from "../../state/themeState";
-import { keyboardState } from "../../state/keyboardState";
+import { ReactComponent as DownArrow } from "../svg/arrow.svg";
+import { themeState } from "../state/themeState";
+import { keyboardState } from "../state/keyboardState";
 
 const Direction = () => {
   function openKeyboard() {

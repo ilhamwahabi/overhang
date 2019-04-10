@@ -1,9 +1,9 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 
-import { ReactComponent as Sun } from "../../svg/sun.svg";
-import { ReactComponent as Moon } from "../../svg/moon.svg";
-import { themeState } from "../../state/themeState";
+import { ReactComponent as Sun } from "../svg/sun.svg";
+import { ReactComponent as Moon } from "../svg/moon.svg";
+import { themeState } from "../state/themeState";
 
 const Toggle = () => {
   const renderToggle = () => {

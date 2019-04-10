@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import cx from "classnames";
 
-import { guessState } from "../../../state/guessState";
-import { quizState } from "../../../state/quizState";
-import { themeState } from "../../../state/themeState";
-import { keyboardState } from "../../../state/keyboardState";
+import { guessState } from "../../state/guessState";
+import { quizState } from "../../state/quizState";
+import { themeState } from "../../state/themeState";
+import { keyboardState } from "../../state/keyboardState";
 
 const KeyPress = () => {
   const [key, setKey] = useState<string | null>(null);

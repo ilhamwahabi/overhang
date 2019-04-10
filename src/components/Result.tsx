@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import { quizState } from "../../state/quizState";
+import { quizState } from "../state/quizState";
 import Anime from "react-anime";
 
 const Result = () => {

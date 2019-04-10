@@ -2,8 +2,8 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import cx from "classnames";
 
-import { quizState } from "../../../state/quizState";
-import { themeState } from "../../../state/themeState";
+import { quizState } from "../../state/quizState";
+import { themeState } from "../../state/themeState";
 
 const Hint = () => {
   return (

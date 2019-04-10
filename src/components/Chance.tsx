@@ -2,11 +2,11 @@ import React from "react";
 import FlipMove from "react-flip-move";
 import { observer } from "mobx-react-lite";
 
-import { ReactComponent as OrangeBullet } from "../../svg/bullet.svg";
-import { ReactComponent as BlueBullet } from "../../svg/bullet-blue.svg";
+import { ReactComponent as OrangeBullet } from "../svg/bullet.svg";
+import { ReactComponent as BlueBullet } from "../svg/bullet-blue.svg";
 
-import { chanceState } from "../../state/chanceState";
-import { themeState } from "../../state/themeState";
+import { chanceState } from "../state/chanceState";
+import { themeState } from "../state/themeState";
 
 const Chance = () => {
   const renderBullet = (totalChance: number) => {

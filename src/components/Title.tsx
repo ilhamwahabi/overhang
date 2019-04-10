@@ -2,23 +2,24 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import cx from "classnames";
 
-import { themeState } from "../../state/themeState";
+import { themeState } from "../state/themeState";
 
-const Footer = () => {
+const Title = () => {
   return (
     <div
       className={cx(
-        "p-5",
+        "text-2xl",
+        "md:text-3xl",
+        "p-4",
         "fixed",
-        "pin-b",
+        "pin-t",
         "pin-l",
-        "text-center",
         `text-${themeState.secondary}`
       )}
     >
-      Made by Ilham Wahabi
+      Over Hangman
     </div>
   );
 };
 
-export default observer(Footer);
+export default observer(Title);

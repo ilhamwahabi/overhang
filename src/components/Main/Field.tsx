@@ -2,8 +2,8 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import cx from "classnames";
 
-import { guessState } from "../../../../state/guessState";
-import { themeState } from "../../../../state/themeState";
+import { guessState } from "../../state/guessState";
+import { themeState } from "../../state/themeState";
 
 const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
   const renderLetter = (letter: string) => {
