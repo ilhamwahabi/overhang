@@ -82,7 +82,10 @@ const KeyPress = () => {
             "md:text-6xl",
             "align-middle",
             ...flexTextClass.split(" "),
-            `border-${themeState.secondary}`,
+            {
+              [`border-${themeState.secondary}`]:
+                guessState.guessStatus === null
+            },
             {
               [`border-${themeState.tertiary}`]:
                 guessState.guessStatus === "correct"

@@ -42,12 +42,11 @@ const Result = () => {
     quizState.result && (
       <>
         <div
-          className="fixed z-20 text-center"
+          className="fixed z-20 text-center pointer-events-none"
           style={{
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
-            pointerEvents: "none"
+            transform: "translate(-50%, -50%)"
           }}
         >
           <Anime

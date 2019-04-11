@@ -9,7 +9,7 @@ const Footer = () => {
     <a href="https://github.com/iwgx/over-hangman">
       <div
         className={`
-          p-5 fixed pin-b pin-l text-center
+          pl-5 pb-5 fixed pin-b pin-l text-center
           text-${themeState.secondary}
         `}
       >
