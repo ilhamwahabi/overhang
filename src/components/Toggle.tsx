@@ -9,12 +9,15 @@ const Toggle = () => {
   const renderToggle = () => {
     const toggleButtonClass = "w-8 cursor-pointer";
 
+    const switchTheme = (theme: "dark" | "light") =>
+      themeState.changeTheme(theme);
+
     switch (themeState.theme) {
       case "light":
         return (
           <Sun
             className={toggleButtonClass}
-            onClick={() => themeState.changeTheme("dark")}
+            onClick={switchTheme.bind(null, "dark")}
           />
         );
         break;
@@ -22,7 +25,7 @@ const Toggle = () => {
         return (
           <Moon
             className={toggleButtonClass}
-            onClick={() => themeState.changeTheme("light")}
+            onClick={switchTheme.bind(null, "light")}
           />
         );
         break;

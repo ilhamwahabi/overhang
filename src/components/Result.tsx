@@ -36,6 +36,8 @@ const Result = () => {
     );
   };
 
+  const reset = () => quizState.reset();
+
   return (
     quizState.result && (
       <>
@@ -68,7 +70,7 @@ const Result = () => {
             { "bg-blue-darkest": quizState.result === "win" },
             { "bg-red-darkest": quizState.result === "lose" }
           )}
-          onClick={() => quizState.reset()}
+          onClick={reset}
         />
       </>
     )
