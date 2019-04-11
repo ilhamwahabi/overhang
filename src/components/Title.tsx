@@ -7,15 +7,10 @@ import { themeState } from "../state/themeState";
 const Title = () => {
   return (
     <div
-      className={cx(
-        "text-2xl",
-        "md:text-3xl",
-        "p-4",
-        "fixed",
-        "pin-t",
-        "pin-l",
-        `text-${themeState.secondary}`
-      )}
+      className={`
+        text-2xl md:text-3xl p-4 fixed pin-t pin-l 
+        text-${themeState.secondary}
+      `}
     >
       Over Hangman
     </div>

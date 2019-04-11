@@ -1,11 +1,11 @@
 import React from "react";
+import { observer } from "mobx-react-lite";
 
 import Hint from "./Hint";
 import Hangman from "./Hangman";
 import KeyPress from "./KeyPress";
 import Keyboard from "../Keyboard";
 import { keyboardState } from "../../state/keyboardState";
-import { observer } from "mobx-react-lite";
 
 const Main = () => {
   return (

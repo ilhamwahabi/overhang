@@ -1,5 +1,4 @@
 import React from "react";
-import cx from "classnames";
 import { observer } from "mobx-react-lite";
 
 import Title from "./Title";
@@ -15,14 +14,11 @@ import { themeState } from "../state/themeState";
 const App = () => {
   return (
     <div
-      className={cx(
-        "w-screen",
-        "h-screen",
-        `bg-${themeState.primary}`,
-        "flex",
-        "flex-col",
-        "justify-center"
-      )}
+      className={`
+        w-screen h-screen
+        flex flex-col justify-center
+        bg-${themeState.primary}
+      `}
     >
       <Title />
       <Stage />

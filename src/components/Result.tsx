@@ -1,7 +1,9 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import { quizState } from "../state/quizState";
 import Anime from "react-anime";
+import cx from "classnames";
+
+import { quizState } from "../state/quizState";
 
 const Result = () => {
   const resultTextClass = "text-5xl md:text-8xl inline-block";
@@ -34,19 +36,6 @@ const Result = () => {
     );
   };
 
-  const getBackdropClassname = (result: "lose" | "win") => {
-    let backdropClassname = "fixed w-screen h-screen opacity-75 z-10";
-    switch (quizState.result) {
-      case "win":
-        backdropClassname += " bg-blue-darkest";
-        break;
-      case "lose":
-        backdropClassname += " bg-red-darkest";
-        break;
-    }
-    return backdropClassname;
-  };
-
   return (
     quizState.result && (
       <>
@@ -70,7 +59,15 @@ const Result = () => {
           {renderResult(quizState.result)}
         </div>
         <div
-          className={getBackdropClassname(quizState.result)}
+          className={cx(
+            "fixed",
+            "w-screen",
+            "h-screen",
+            "opacity-75",
+            "z-10",
+            { "bg-blue-darkest": quizState.result === "win" },
+            { "bg-red-darkest": quizState.result === "lose" }
+          )}
           onClick={() => quizState.reset()}
         />
       </>

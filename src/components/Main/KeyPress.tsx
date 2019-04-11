@@ -41,18 +41,16 @@ const KeyPress = () => {
   }, []);
 
   const renderText = (status: "correct" | "wrong" | null) => {
-    const flexTextClass = ["flex", "justify-center", "items-center"];
+    const flexTextClass = "flex justify-center items-center";
 
     if (key === null) {
       return (
         <p
-          className={cx(
-            "text-base",
-            "md:text-2xl",
-            "h-32",
-            ...flexTextClass,
-            `text-${themeState.secondary}`
-          )}
+          className={`
+            text-base md:text-2xl h-32
+            ${flexTextClass}
+            text-${themeState.secondary}
+          `}
         >
           Press any key to guess the letter
         </p>
@@ -60,16 +58,13 @@ const KeyPress = () => {
     } else if (key === "invalid") {
       return (
         <p
-          className={cx(
-            "text-2xl",
-            "md:text-4xl",
-            "border-red",
-            "border-b-2",
-            "h-16",
-            "md:h-32",
-            ...flexTextClass,
-            `text-${themeState.secondary}`
-          )}
+          className={`
+            text-2xl md:text-4xl
+            border-red border-b-2
+            h-16 md:h-32
+            ${flexTextClass}
+            text-${themeState.secondary}
+          `}
         >
           invalid key
         </p>
@@ -86,7 +81,7 @@ const KeyPress = () => {
             "text-4xl",
             "md:text-6xl",
             "align-middle",
-            ...flexTextClass,
+            ...flexTextClass.split(" "),
             `border-${themeState.secondary}`,
             { [`border-${themeState.tertiary}`]: status === "correct" },
             { "border-red": status === "wrong" },
