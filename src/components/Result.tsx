@@ -8,9 +8,9 @@ import { quizState } from "../state/quizState";
 const Result = () => {
   const resultTextClass = "text-5xl md:text-8xl inline-block";
 
-  const renderResult = (result: "win" | "lose" | null) => {
+  const renderResult = () => {
     let resultComponent;
-    switch (result) {
+    switch (quizState.result) {
       case "win":
         resultComponent = (
           <span className={`${resultTextClass} text-blue`}>WIN</span>
@@ -56,7 +56,7 @@ const Result = () => {
           >
             <span className={resultTextClass}>YOU</span>
           </Anime>{" "}
-          {renderResult(quizState.result)}
+          {renderResult()}
         </div>
         <div
           className={cx(

@@ -40,7 +40,7 @@ const KeyPress = () => {
     };
   }, []);
 
-  const renderText = (status: "correct" | "wrong" | null) => {
+  const renderText = () => {
     const flexTextClass = "flex justify-center items-center";
 
     if (key === null) {
@@ -83,8 +83,11 @@ const KeyPress = () => {
             "align-middle",
             ...flexTextClass.split(" "),
             `border-${themeState.secondary}`,
-            { [`border-${themeState.tertiary}`]: status === "correct" },
-            { "border-red": status === "wrong" },
+            {
+              [`border-${themeState.tertiary}`]:
+                guessState.guessStatus === "correct"
+            },
+            { "border-red": guessState.guessStatus === "wrong" },
             `text-${themeState.secondary}`
           )}
         >
@@ -94,9 +97,7 @@ const KeyPress = () => {
     }
   };
 
-  return keyboardState.isOpen ? null : (
-    <div>{renderText(guessState.guessStatus)}</div>
-  );
+  return keyboardState.isOpen ? null : <div>{renderText()}</div>;
 };
 
 export default observer(KeyPress);

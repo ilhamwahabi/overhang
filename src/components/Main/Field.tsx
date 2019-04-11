@@ -6,7 +6,7 @@ import { guessState } from "../../state/guessState";
 import { themeState } from "../../state/themeState";
 
 const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
-  const renderLetter = (letter: string) => {
+  const renderLetter = () => {
     if (guessState.correctGuess.includes(letter)) {
       return letter.toUpperCase();
     }
@@ -34,7 +34,7 @@ const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
         `text-${themeState.secondary}`
       )}
     >
-      {renderLetter(letter)}
+      {renderLetter()}
     </div>
   );
 };

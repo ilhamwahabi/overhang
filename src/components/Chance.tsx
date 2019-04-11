@@ -9,10 +9,10 @@ import { chanceState } from "../state/chanceState";
 import { themeState } from "../state/themeState";
 
 const Chance = () => {
-  const renderBullet = (totalChance: number) => {
+  const renderBullet = () => {
     const bulletClass = "md:w-12 w-6 h-auto";
 
-    return Array.from({ length: totalChance }).map((element, index) => {
+    return Array.from({ length: chanceState.chance }).map((element, index) => {
       switch (themeState.theme) {
         case "dark":
           return <OrangeBullet className={bulletClass} key={index} />;
@@ -24,7 +24,7 @@ const Chance = () => {
 
   return (
     <div className="fixed pin-r pin-b m-4">
-      <FlipMove>{renderBullet(chanceState.chance)}</FlipMove>
+      <FlipMove>{renderBullet()}</FlipMove>
     </div>
   );
 };

@@ -5,8 +5,9 @@ import Field from "./Field";
 import { quizState } from "../../state/quizState";
 
 const Hangman = () => {
-  const renderWordField = (word: string) => {
+  const renderWordField = () => {
     const rows: any[] = [];
+    const word = quizState.currentQuiz.answer.join("");
 
     if (word.length > 10) {
       word.split(" ").forEach(phrase => rows.push(renderRow(phrase)));
@@ -31,11 +32,7 @@ const Hangman = () => {
     );
   };
 
-  return (
-    <div className="flex flex-col">
-      {renderWordField(quizState.currentQuiz.answer.join(""))}
-    </div>
-  );
+  return <div className="flex flex-col">{renderWordField()}</div>;
 };
 
 export default observer(Hangman);
