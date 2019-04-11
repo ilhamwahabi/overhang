@@ -13,7 +13,7 @@ const KeyPress = () => {
   const onKeyPress = (event: KeyboardEvent) => {
     const loweredKey = event.key.toLowerCase();
 
-    if (quizState.result) return;
+    if (quizState.result) return quizState.reset();
     if (guessState.isChecking) return;
 
     if (loweredKey.length === 1 && loweredKey.match(/[a-z]/)) {
