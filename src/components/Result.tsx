@@ -4,21 +4,19 @@ import { quizState } from "../state/quizState";
 import Anime from "react-anime";
 
 const Result = () => {
+  const resultTextClass = "text-5xl md:text-8xl inline-block";
+
   const renderResult = (result: "win" | "lose" | null) => {
     let resultComponent;
     switch (result) {
       case "win":
         resultComponent = (
-          <span className="text-5xl md:text-8xl text-blue inline-block">
-            WIN
-          </span>
+          <span className={`${resultTextClass} text-blue`}>WIN</span>
         );
         break;
       case "lose":
         resultComponent = (
-          <span className="text-5xl md:text-8xl text-red inline-block">
-            LOSE
-          </span>
+          <span className={`${resultTextClass} text-red`}>LOSE</span>
         );
         break;
     }
@@ -67,7 +65,7 @@ const Result = () => {
             direction="normal"
             translateY={["-100vh", "0"]}
           >
-            <span className="text-5xl md:text-8xl inline-block">YOU</span>
+            <span className={resultTextClass}>YOU</span>
           </Anime>{" "}
           {renderResult(quizState.result)}
         </div>

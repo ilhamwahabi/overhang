@@ -41,6 +41,8 @@ const KeyPress = () => {
   }, []);
 
   const renderText = (status: "correct" | "wrong" | null) => {
+    const flexTextClass = ["flex", "justify-center", "items-center"];
+
     if (key === null) {
       return (
         <p
@@ -48,9 +50,7 @@ const KeyPress = () => {
             "text-base",
             "md:text-2xl",
             "h-32",
-            "flex",
-            "justify-center",
-            "items-center",
+            ...flexTextClass,
             `text-${themeState.secondary}`
           )}
         >
@@ -67,9 +67,7 @@ const KeyPress = () => {
             "border-b-2",
             "h-16",
             "md:h-32",
-            "flex",
-            "justify-center",
-            "items-center",
+            ...flexTextClass,
             `text-${themeState.secondary}`
           )}
         >
@@ -88,9 +86,7 @@ const KeyPress = () => {
             "text-4xl",
             "md:text-6xl",
             "align-middle",
-            "flex",
-            "justify-center",
-            "items-center",
+            ...flexTextClass,
             `border-${themeState.secondary}`,
             { [`border-${themeState.tertiary}`]: status === "correct" },
             { "border-red": status === "wrong" },

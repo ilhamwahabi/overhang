@@ -10,12 +10,14 @@ import { themeState } from "../state/themeState";
 
 const Chance = () => {
   const renderBullet = (totalChance: number) => {
+    const bulletClass = "md:w-12 w-6 h-auto";
+
     return Array.from({ length: totalChance }).map((element, index) => {
       switch (themeState.theme) {
         case "dark":
-          return <OrangeBullet className="md:w-12 w-6 h-auto" key={index} />;
+          return <OrangeBullet className={bulletClass} key={index} />;
         case "light":
-          return <BlueBullet className="md:w-12 w-6 h-auto" key={index} />;
+          return <BlueBullet className={bulletClass} key={index} />;
       }
     });
   };

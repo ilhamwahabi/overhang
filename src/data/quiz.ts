@@ -5,9 +5,15 @@ export const quiz: { hint: string; answers: string[] }[] = [
     answers: ["Dan Abramov", "Andrew Clark", "Brian Vaughn"]
   },
   { hint: "CSS framework", answers: ["Bootstrap", "Bulma", "Foundation"] },
-  { hint: "Web browser", answers: ["Brave", "Chrome"] },
+  {
+    hint: "Web browser",
+    answers: ["Brave", "Chrome", "Firefox", "Opera", "Safari"]
+  },
   { hint: "Code hosting platform", answers: ["Gitlab", "Github", "Bitbucket"] },
-  { hint: "Text editor", answers: ["VSCode", "Atom", "Sublime"] },
+  {
+    hint: "Text editor",
+    answers: ["VSCode", "Atom", "Sublime", "Brackets", "Notepad"]
+  },
   {
     hint: "React hooks",
     answers: ["useState", "useEffect", "useRef", "useContext"]
