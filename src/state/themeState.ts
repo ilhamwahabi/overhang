@@ -2,11 +2,13 @@ import { action, observable, computed } from "mobx";
 
 class ThemeState {
   @observable
-  theme: "light" | "dark" = "dark";
+  theme: "light" | "dark" =
+    (localStorage.getItem("overhangman_theme") as ("light" | "dark")) || "dark";
 
   @action
   changeTheme(theme: "light" | "dark") {
     this.theme = theme;
+    localStorage.setItem("overhangman_theme", theme);
   }
 
   @computed
