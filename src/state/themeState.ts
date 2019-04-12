@@ -1,18 +1,22 @@
 import { action, observable, computed } from "mobx";
 
+type theme = "light" | "dark";
+type primary = "white" | "black";
+type secondary = "black" | "white";
+type tertiary = "blue-dark" | "orange";
+
 class ThemeState {
   @observable
-  theme: "light" | "dark" =
-    (localStorage.getItem("overhangman_theme") as ("light" | "dark")) || "dark";
+  theme: theme = (localStorage.getItem("overhangman_theme") as theme) || "dark";
 
   @action
-  changeTheme(theme: "light" | "dark") {
+  changeTheme(theme: theme) {
     this.theme = theme;
     localStorage.setItem("overhangman_theme", theme);
   }
 
   @computed
-  get primary() {
+  get primary(): primary {
     switch (this.theme) {
       case "light":
         return "white";
@@ -22,7 +26,7 @@ class ThemeState {
   }
 
   @computed
-  get secondary() {
+  get secondary(): secondary {
     switch (this.theme) {
       case "light":
         return "black";
@@ -32,7 +36,7 @@ class ThemeState {
   }
 
   @computed
-  get tertiary() {
+  get tertiary(): tertiary {
     switch (this.theme) {
       case "light":
         return "blue-dark";
