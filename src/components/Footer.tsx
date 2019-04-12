@@ -10,7 +10,7 @@ const Footer = () => {
       <div
         className={`
           pl-5 pb-5 fixed pin-b pin-l text-center
-          text-${themeState.secondary}
+          text-${themeState.secondary} text-sm md:text-xl
         `}
       >
         Made by Ilham Wahabi
