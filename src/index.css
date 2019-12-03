@@ -1,10 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Oswald', sans-serif;
-  color: #EEF9FF;
+  font-family: "Oswald", sans-serif;
+  color: #eef9ff;
 }
 
 .arrow-blue-dark * {
   fill: #2779bd;
+}
+
+.transition-bg {
+  transition: background 0.5s;
 }

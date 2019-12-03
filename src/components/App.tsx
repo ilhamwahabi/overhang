@@ -15,6 +15,7 @@ const App = () => {
   return (
     <div
       className={`
+        transition-bg
         w-screen h-screen
         flex flex-col justify-center
         bg-${themeState.primary}
