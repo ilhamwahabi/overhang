@@ -26,8 +26,7 @@
     "build": "npm run tailwind:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tailwind:css": "tailwind build src/tailwind.src.css -c tailwind.config.js -o src/tailwind.css",
-    "now-build": "react-scripts build"
+    "tailwind:css": "tailwind build src/tailwind.src.css -c tailwind.config.js -o src/tailwind.css"
   },
   "eslintConfig": {
     "extends": "react-app"
