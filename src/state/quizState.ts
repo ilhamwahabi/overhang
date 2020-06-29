@@ -1,5 +1,5 @@
 import { action, observable } from "mobx";
-import _ from "lodash";
+import { shuffle, take, map } from "lodash-es";
 
 import Quiz from "../class/Quiz";
 import { chanceState } from "./chanceState";
@@ -27,11 +27,11 @@ class QuizState {
 
   @action
   getQuizzes() {
-    return _(quiz)
-      .shuffle()
-      .take(5)
-      .value()
-      .map(({ hint, answers }) => new Quiz(hint, answers));
+    const randomFiveQuizzes = take(shuffle(quiz), 5);
+    return map(
+      randomFiveQuizzes,
+      ({ hint, answers }) => new Quiz(hint, answers)
+    );
   }
 
   @action
