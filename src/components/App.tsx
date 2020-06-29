@@ -17,7 +17,7 @@ const App = () => {
     <div
       className={cx(
         `transition-bg w-screen h-screen flex flex-col justify-center`,
-        { "bg-white": themeState.theme === "light" },
+        { "bg-light": themeState.theme === "light" },
         { "bg-black": themeState.theme === "dark" }
       )}
     >

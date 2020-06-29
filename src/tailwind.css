@@ -686,10 +686,10 @@ video {
   background-color: rgba(34, 41, 47, var(--bg-opacity));
 }
 
-.bg-white {
+.bg-light {
   --bg-opacity: 1;
-  background-color: #ffffff;
-  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  background-color: #F1F1F1;
+  background-color: rgba(241, 241, 241, var(--bg-opacity));
 }
 
 .border-transparent {
