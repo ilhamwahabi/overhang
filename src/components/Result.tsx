@@ -6,7 +6,7 @@ import cx from "classnames";
 import { quizState } from "../state/quizState";
 
 const Result = () => {
-  const resultTextClass = "text-5xl md:text-8xl inline-block";
+  const resultTextClass = "text-6xl md:text-8xl inline-block";
 
   const renderResult = () => {
     let resultComponent;
@@ -42,7 +42,7 @@ const Result = () => {
     quizState.result && (
       <>
         <div
-          className="fixed z-20 text-center pointer-events-none"
+          className="fixed z-20 text-center pointer-events-none flex flex-col md:flex-row"
           style={{
             top: "50%",
             left: "50%",

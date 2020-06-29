@@ -831,8 +831,8 @@ video {
   font-size: 2.25rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
+.text-6xl {
+  font-size: 4rem;
 }
 
 .leading-regular {
@@ -1041,6 +1041,13 @@ video {
 @media (min-width: 768px) {
   .md\:border-8 {
     border-width: 8px;
+  }
+
+  .md\:flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+            flex-direction: row;
   }
 
   .md\:h-4 {
