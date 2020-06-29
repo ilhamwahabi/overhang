@@ -726,6 +726,10 @@ video {
   border-color: rgba(39, 121, 189, var(--border-opacity));
 }
 
+.rounded-round {
+  border-radius: 50%;
+}
+
 .border-2 {
   border-width: 2px;
 }

@@ -13,29 +13,27 @@ const Stage = () => {
     return Array.from({ length: 5 - quizState.stage }).map((_, index) => {
       return (
         <div
+          key={index}
           className={cx(
-            `${dotClass} border-2`,
+            `${dotClass} border-2 rounded-round`,
             { "border-blue-dark": themeState.theme === "light" },
             { "border-orange": themeState.theme === "dark" }
           )}
-          style={{ borderRadius: "50%" }}
-          key={index}
         />
       );
     });
   };
 
   const renderFinishedStage = () => {
-    return Array.from({ length: quizState.stage }).map((el, index) => {
+    return Array.from({ length: quizState.stage }).map((_, index) => {
       return (
         <div
+          key={index}
           className={cx(
-            `${dotClass} border-4 md:border-8`,
+            `${dotClass} border-4 md:border-8 rounded-round`,
             { "border-blue-dark": themeState.theme === "light" },
             { "border-orange": themeState.theme === "dark" }
           )}
-          style={{ borderRadius: "50%" }}
-          key={index}
         />
       );
     });
