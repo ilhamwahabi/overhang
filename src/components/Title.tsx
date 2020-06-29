@@ -7,10 +7,11 @@ import { themeState } from "../state/themeState";
 const Title = () => {
   return (
     <div
-      className={`
-        text-2xl md:text-3xl p-4 fixed pin-t pin-l 
-        text-${themeState.secondary}
-      `}
+      className={cx(
+        `text-2xl md:text-3xl p-4 fixed top-0 left-0 leading-regular`,
+        { "text-black": themeState.theme === "light" },
+        { "text-white": themeState.theme === "dark" }
+      )}
     >
       Over Hangman
     </div>

@@ -1,5 +1,6 @@
 import { action, observable } from "mobx";
 import _ from "lodash";
+
 import Quiz from "../class/Quiz";
 import { chanceState } from "./chanceState";
 import { quiz } from "../data/quiz";

@@ -9,8 +9,8 @@ Also for learning:
 - React + Typescript and SVG for component
 - React hooks, all components here is functional component
 - Mobx for state management
-- TailwindCSS for styling
-- Now for deploy
+- Tailwind CSS for styling
+- Vercel for deploy
 
 ## Usage
 

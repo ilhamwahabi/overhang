@@ -32,7 +32,7 @@ const Toggle = () => {
     }
   };
 
-  return <div className="fixed pin-t pin-r p-4">{renderToggle()}</div>;
+  return <div className="fixed top-0 right-0 p-4">{renderToggle()}</div>;
 };
 
 export default observer(Toggle);

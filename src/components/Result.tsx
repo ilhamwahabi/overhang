@@ -46,7 +46,7 @@ const Result = () => {
           style={{
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)"
+            transform: "translate(-50%, -50%)",
           }}
         >
           <Anime
@@ -61,11 +61,7 @@ const Result = () => {
         </div>
         <div
           className={cx(
-            "fixed",
-            "w-screen",
-            "h-screen",
-            "opacity-75",
-            "z-10",
+            "fixed w-screen h-screen opacity-75 z-10",
             { "bg-blue-darkest": quizState.result === "win" },
             { "bg-red-darkest": quizState.result === "lose" }
           )}

@@ -1,5 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
+import cx from "classnames";
 
 import Title from "./Title";
 import Toggle from "./Toggle";
@@ -14,12 +15,11 @@ import { themeState } from "../state/themeState";
 const App = () => {
   return (
     <div
-      className={`
-        transition-bg
-        w-screen h-screen
-        flex flex-col justify-center
-        bg-${themeState.primary}
-      `}
+      className={cx(
+        `transition-bg w-screen h-screen flex flex-col justify-center`,
+        { "bg-white": themeState.theme === "light" },
+        { "bg-black": themeState.theme === "dark" }
+      )}
     >
       <Title />
       <Stage />

@@ -1,5 +1,6 @@
 import { action, observable } from "mobx";
 import _ from "lodash";
+
 import { quizState } from "./quizState";
 import { chanceState } from "./chanceState";
 
@@ -18,10 +19,7 @@ class GuessState {
 
   @action
   addGuessedLetter(letter: string): "levelup" | "lose" | "" {
-    const answer = _(quizState.currentQuiz.answer)
-      .uniq()
-      .without(" ")
-      .value();
+    const answer = _(quizState.currentQuiz.answer).uniq().without(" ").value();
 
     this.isChecking = true;
 

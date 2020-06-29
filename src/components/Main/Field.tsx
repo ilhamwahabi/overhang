@@ -15,23 +15,15 @@ const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
   return (
     <div
       className={cx(
-        "w-3",
-        "h-8",
-        "md:w-16",
-        "md:h-16",
-        "mx-2",
-        "md:mx-4",
-        "mb-10",
-        "border-b-4",
-        "pb-2",
-        "flex",
-        "justify-center",
-        "align-center",
-        "text-xl",
-        "md:text-5xl",
-        { [`border-${themeState.tertiary}`]: !isSpace },
+        `
+          w-3 h-8 md:w-16 md:h-16 mx-2 md:mx-4 mb-10 border-b-4 pb-2
+          flex justify-center align-center text-xl md:text-5xl leading-regular
+        `,
+        { "border-blue-dark": !isSpace && themeState.theme === "light" },
+        { "border-orange": !isSpace && themeState.theme === "dark" },
         { "border-transparent": isSpace },
-        `text-${themeState.secondary}`
+        { "text-black": themeState.theme === "light" },
+        { "text-white": themeState.theme === "dark" }
       )}
     >
       {renderLetter()}
