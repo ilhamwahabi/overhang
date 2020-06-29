@@ -18,6 +18,8 @@ const Chance = () => {
           return <OrangeBullet className={bulletClass} key={index} />;
         case "light":
           return <BlueBullet className={bulletClass} key={index} />;
+        default:
+          return null;
       }
     });
   };

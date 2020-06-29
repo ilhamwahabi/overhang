@@ -20,7 +20,6 @@ const Toggle = () => {
             onClick={switchTheme.bind(null, "dark")}
           />
         );
-        break;
       case "dark":
         return (
           <Moon
@@ -28,7 +27,6 @@ const Toggle = () => {
             onClick={switchTheme.bind(null, "light")}
           />
         );
-        break;
     }
   };
 

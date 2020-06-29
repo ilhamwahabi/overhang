@@ -10,7 +10,7 @@ Also for learning:
 - React hooks, all components here is functional component
 - Mobx for state management
 - Tailwind CSS for styling
-- Vercel for deploy
+- Now (currently Vercel) for deployment
 
 ## Usage
 

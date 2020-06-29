@@ -10,7 +10,7 @@ const Footer = () => {
     <a
       href="https://github.com/iwgx/over-hangman"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       <div
         className={cx(
