@@ -7,10 +7,6 @@ import { themeState } from "../state/themeState";
 import { keyboardState } from "../state/keyboardState";
 
 const Direction = () => {
-  function openKeyboard() {
-    keyboardState.toggle();
-  }
-
   return (
     <div className="flex flex-col items-center justify-center fixed bottom-0 inset-x-0 mb-12 md:mb-4">
       <p
@@ -25,7 +21,7 @@ const Direction = () => {
           : "Open Virtual Keyboard"}
       </p>
       <DownArrow
-        onClick={openKeyboard}
+        onClick={keyboardState.toggle.bind(keyboardState)}
         style={{
           transform: keyboardState.isOpen ? "rotate(0deg)" : "rotate(180deg)",
         }}

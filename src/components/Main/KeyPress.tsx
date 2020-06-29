@@ -34,10 +34,7 @@ const KeyPress = () => {
 
   useEffect(() => {
     document.addEventListener("keypress", onKeyPress);
-
-    return () => {
-      document.removeEventListener("keypress", onKeyPress);
-    };
+    return () => document.removeEventListener("keypress", onKeyPress);
   }, []);
 
   const renderText = () => {
@@ -71,8 +68,10 @@ const KeyPress = () => {
       return (
         <p
           className={cx(
-            "border-b-2 w-16 h-16 md:w-32 md:h-32 text-4xl md:text-6xl align-middle",
-            ...flexTextClass.split(" "),
+            `
+              border-b-2 w-16 h-16 md:w-32 md:h-32
+              text-4xl md:text-6xl align-middle ${flexTextClass}
+            `,
             {
               "border-black":
                 themeState.theme === "light" && guessState.guessStatus === null,

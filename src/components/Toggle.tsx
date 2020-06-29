@@ -9,24 +9,23 @@ const Toggle = () => {
   const renderToggle = () => {
     const toggleButtonClass = "w-8 cursor-pointer";
 
-    const switchTheme = (theme: "dark" | "light") =>
-      themeState.changeTheme(theme);
-
     switch (themeState.theme) {
       case "light":
         return (
           <Sun
             className={toggleButtonClass}
-            onClick={switchTheme.bind(null, "dark")}
+            onClick={themeState.changeTheme.bind(themeState, "dark")}
           />
         );
       case "dark":
         return (
           <Moon
             className={toggleButtonClass}
-            onClick={switchTheme.bind(null, "light")}
+            onClick={themeState.changeTheme.bind(themeState, "light")}
           />
         );
+      default:
+        return null;
     }
   };
 

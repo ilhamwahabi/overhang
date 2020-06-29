@@ -21,6 +21,8 @@ const Result = () => {
           <span className={`${resultTextClass} text-red`}>LOSE</span>
         );
         break;
+      default:
+        break;
     }
 
     return (
@@ -35,8 +37,6 @@ const Result = () => {
       </Anime>
     );
   };
-
-  const reset = () => quizState.reset();
 
   return (
     quizState.result && (
@@ -65,7 +65,7 @@ const Result = () => {
             { "bg-blue-darkest": quizState.result === "win" },
             { "bg-red-darkest": quizState.result === "lose" }
           )}
-          onClick={reset}
+          onClick={quizState.reset.bind(quizState)}
         />
       </>
     )

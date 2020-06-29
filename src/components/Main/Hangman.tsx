@@ -6,11 +6,11 @@ import { quizState } from "../../state/quizState";
 
 const Hangman = () => {
   const renderWordField = () => {
-    const rows: any[] = [];
+    const rows: JSX.Element[] = [];
     const word = quizState.currentQuiz.answer.join("");
 
     if (word.length > 10) {
-      word.split(" ").forEach(phrase => rows.push(renderRow(phrase)));
+      word.split(" ").forEach((phrase) => rows.push(renderRow(phrase)));
     } else {
       rows.push(renderRow(word));
     }
