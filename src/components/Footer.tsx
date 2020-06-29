@@ -7,7 +7,11 @@ import { ReactComponent as GithubLogo } from "../svg/github.svg";
 
 const Footer = () => {
   return (
-    <a href="https://github.com/iwgx/over-hangman">
+    <a
+      href="https://github.com/iwgx/over-hangman"
+      target="_blank"
+      rel="noopener"
+    >
       <div
         className={cx(
           `pl-5 pb-5 fixed bottom-0 left-0 text-center leading-regular flex text-sm md:text-xl`,
