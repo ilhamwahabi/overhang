@@ -11,6 +11,7 @@ Also for learning:
 - Mobx for state management
 - Tailwind CSS for styling
 - Now (currently Vercel) for deployment
+- Splitbee for analytics
 
 ## Usage
 
@@ -18,4 +19,4 @@ Also for learning:
 2. Install package, `yarn`
 3. Run, `yarn start`
 
-Or open direcly here https://over-hangman.iwgx.now.sh/
+Or open direcly here https://over-hangman.game.iwgx.io
