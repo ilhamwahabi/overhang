@@ -1,6 +1,6 @@
 {
   "name": "over-hangman",
-  "homepage": "https://over-hangman.iwgx.now.sh",
+  "homepage": "https://over-hangman.iwgx.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

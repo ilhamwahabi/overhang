@@ -19,4 +19,4 @@ Also for learning:
 2. Install package, `yarn`
 3. Run, `yarn start`
 
-Or open direcly here https://over-hangman.game.iwgx.io
+Or open direcly here https://over-hangman.iwgx.io
