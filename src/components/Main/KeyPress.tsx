@@ -44,7 +44,7 @@ const KeyPress = () => {
       return (
         <p
           className={cx(
-            `text-base md:text-2xl h-32 ${flexTextClass}`,
+            `text-base md:text-2xl h-16 md:h-24 lg:h-32 ${flexTextClass}`,
             { "text-black": themeState.theme === "light" },
             { "text-white": themeState.theme === "dark" }
           )}
@@ -56,7 +56,7 @@ const KeyPress = () => {
       return (
         <p
           className={cx(
-            `text-2xl md:text-4xl border-red border-b-2 h-16 md:h-32 ${flexTextClass}`,
+            `text-2xl md:text-4xl border-red border-b-2 h-16 md:h-24 lg:h-32 ${flexTextClass}`,
             { "text-black": themeState.theme === "light" },
             { "text-white": themeState.theme === "dark" }
           )}
@@ -69,8 +69,11 @@ const KeyPress = () => {
         <p
           className={cx(
             `
-              border-b-2 w-16 h-16 md:w-32 md:h-32
-              text-4xl md:text-6xl align-middle ${flexTextClass}
+              border-b-2
+              w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32
+              text-4xl md:text-5xl lg:text-6xl
+              align-middle ${flexTextClass}
+              leading-regular
             `,
             {
               "border-black":

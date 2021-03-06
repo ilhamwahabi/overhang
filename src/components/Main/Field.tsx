@@ -16,8 +16,13 @@ const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
     <div
       className={cx(
         `
-          w-3 h-8 md:w-16 md:h-16 mx-2 md:mx-4 mb-10 border-b-4 pb-2
-          flex justify-center align-center text-xl md:text-5xl leading-regular
+          leading-regular
+          text-xl md:text-4xl lg:text-5xl
+          w-3 h-8 md:w-8 md:h-16 lg:w-16 lg:h-16
+          mx-2 md:mx-3 lg:mx-4 mb-10
+          pb-2 md:pb-3
+          flex justify-center align-center
+          border-b-4
         `,
         { "border-blue-dark": !isSpace && themeState.theme === "light" },
         { "border-orange": !isSpace && themeState.theme === "dark" },
