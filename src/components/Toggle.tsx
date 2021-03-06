@@ -7,7 +7,7 @@ import { themeState } from "../state/themeState";
 
 const Toggle = () => {
   const renderToggle = () => {
-    const toggleButtonClass = "w-8 cursor-pointer";
+    const toggleButtonClass = "w-6 lg:w-8 cursor-pointer";
 
     switch (themeState.theme) {
       case "light":
