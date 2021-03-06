@@ -390,7 +390,6 @@ pre {
 button {
   background-color: transparent;
   background-image: none;
-  padding: 0;
 }
 
 /**
@@ -609,9 +608,6 @@ video {
   * @import "tailwindcss/components";
   */
 
-/*tailwind start components
- */
-
 .container {
   width: 100%;
 }
@@ -639,9 +635,6 @@ video {
     max-width: 1280px;
   }
 }
-
-/*tailwind end components
- */
 
 /**
   * Here you would add any of your custom component classes; stuff that you'd
@@ -762,6 +755,10 @@ video {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .flex-col {
@@ -1011,6 +1008,80 @@ video {
           transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
 }
 
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
 /**
   * Here you would add any custom utilities you need that don't come out of the
   * box with Tailwind.
@@ -1026,7 +1097,65 @@ video {
   * @import "utilities/skew-transforms";
   */
 
+@media (min-width: 640px) {
+  .sm\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .sm\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sm\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sm\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .sm\:container {
+      max-width: 1280px;
+    }
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .md\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .md\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .md\:container {
+      max-width: 1280px;
+    }
+  }
+
   .md\:border-8 {
     border-width: 8px;
   }
@@ -1117,6 +1246,34 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .lg\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .lg\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .lg\:container {
+      max-width: 1280px;
+    }
+  }
+
   .lg\:h-5 {
     height: 1.25rem;
   }
@@ -1164,5 +1321,35 @@ video {
 
   .lg\:w-32 {
     width: 8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .xl\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .xl\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .xl\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .xl\:container {
+      max-width: 1280px;
+    }
   }
 }
