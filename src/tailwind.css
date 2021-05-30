@@ -956,6 +956,10 @@ video {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .tracking-wider {
   letter-spacing: 0.05em;
 }
