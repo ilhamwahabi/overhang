@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import cx from "classnames";
+import clsx from "clsx";
 
 import { ReactComponent as DownArrow } from "../svg/arrow.svg";
 import { themeState } from "../state/themeState";
@@ -14,7 +14,7 @@ const Direction = () => {
         onClick={keyboardState.toggle.bind(keyboardState)}
       >
         <p
-          className={cx(
+          className={clsx(
             `text-sm md:text-base mb-2 md:mb-4 leading-regular tracking-wide`,
             { "text-black": themeState.theme === "light" },
             { "text-white": themeState.theme === "dark" }
@@ -29,7 +29,7 @@ const Direction = () => {
           style={{
             transform: keyboardState.isOpen ? "rotate(0deg)" : "rotate(180deg)",
           }}
-          className={cx(
+          className={clsx(
             `w-4 md:w-6 h-auto cursor-pointer`,
             { "arrow-blue-dark": themeState.theme === "light" },
             { "arrow-orange": themeState.theme === "dark" }

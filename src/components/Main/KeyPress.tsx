@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
-import cx from "classnames";
+import clsx from "clsx";
 
 import { guessState } from "../../state/guessState";
 import { quizState } from "../../state/quizState";
@@ -43,7 +43,7 @@ const KeyPress = () => {
     if (key === null) {
       return (
         <p
-          className={cx(
+          className={clsx(
             `text-base md:text-2xl h-16 md:h-24 lg:h-32 ${flexTextClass}`,
             { "text-black": themeState.theme === "light" },
             { "text-white": themeState.theme === "dark" }
@@ -55,7 +55,7 @@ const KeyPress = () => {
     } else if (key === "invalid") {
       return (
         <p
-          className={cx(
+          className={clsx(
             `text-2xl md:text-4xl border-red border-b-2 h-16 md:h-24 lg:h-32 ${flexTextClass}`,
             { "text-black": themeState.theme === "light" },
             { "text-white": themeState.theme === "dark" }
@@ -67,7 +67,7 @@ const KeyPress = () => {
     } else {
       return (
         <p
-          className={cx(
+          className={clsx(
             `
               border-b-2
               w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32

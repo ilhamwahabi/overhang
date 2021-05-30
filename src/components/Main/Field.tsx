@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import cx from "classnames";
+import clsx from "clsx";
 
 import { guessState } from "../../state/guessState";
 import { themeState } from "../../state/themeState";
@@ -14,7 +14,7 @@ const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
 
   return (
     <div
-      className={cx(
+      className={clsx(
         `
           leading-regular
           text-xl md:text-4xl lg:text-5xl

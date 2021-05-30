@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import cx from "classnames";
+import clsx from "clsx";
 
 import Title from "./Title";
 import Toggle from "./Toggle";
@@ -15,7 +15,7 @@ import { themeState } from "../state/themeState";
 const App = () => {
   return (
     <div
-      className={cx(
+      className={clsx(
         `transition-bg w-screen h-screen flex flex-col justify-center`,
         { "bg-light": themeState.theme === "light" },
         { "bg-black": themeState.theme === "dark" }

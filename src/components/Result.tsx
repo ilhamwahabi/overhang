@@ -1,7 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import Anime from "react-anime";
-import cx from "classnames";
+import clsx from "clsx";
 
 import { quizState } from "../state/quizState";
 
@@ -60,7 +60,7 @@ const Result = () => {
           {renderResult()}
         </div>
         <div
-          className={cx(
+          className={clsx(
             "fixed w-screen h-screen opacity-75 z-10",
             { "bg-blue-darkest": quizState.result === "win" },
             { "bg-red-darkest": quizState.result === "lose" }
