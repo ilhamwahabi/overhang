@@ -9,7 +9,7 @@ const Hint = () => {
   return (
     <div
       className={cx(
-        `text-3xl md:text-4xl leading-regular mb-16 md:mb-24`,
+        `text-3xl md:text-5xl tracking-wider leading-regular mb-16 md:mb-20`,
         { "text-black": themeState.theme === "light" },
         { "text-white": themeState.theme === "dark" }
       )}

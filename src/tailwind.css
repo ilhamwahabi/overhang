@@ -956,6 +956,10 @@ video {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
 .align-middle {
   vertical-align: middle;
 }
@@ -1216,8 +1220,8 @@ video {
     margin-bottom: 1rem;
   }
 
-  .md\:mb-24 {
-    margin-bottom: 6rem;
+  .md\:mb-20 {
+    margin-bottom: 5rem;
   }
 
   .md\:pb-3 {

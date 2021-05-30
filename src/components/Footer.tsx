@@ -19,7 +19,7 @@ const Footer = () => {
           { "text-white": themeState.theme === "dark" }
         )}
       >
-        Made by Ilham Wahabi
+        &copy; 2019 Ilham Wahabi
         <GithubLogo
           className="w-4 h-4 ml-2 lg:w-5 lg:h-5 lg:ml-3 inline"
           fill={themeState.theme === "light" ? "black" : "white"}
