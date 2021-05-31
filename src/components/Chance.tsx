@@ -10,7 +10,7 @@ import { themeState } from "../state/themeState";
 
 const Chance = () => {
   const renderBullet = () => {
-    const bulletClass = "md:w-8 lg:w-12 w-6 h-auto inline";
+    const bulletClass = "w-5 md:w-8 lg:w-12 h-auto inline";
 
     return Array.from({ length: chanceState.chance }).map((_, index) => {
       switch (themeState.theme) {

@@ -20,12 +20,9 @@ const Direction = () => {
             { "text-white": themeState.theme === "dark" }
           )}
         >
-          {keyboardState.isOpen
-            ? "Close Virtual Keyboard"
-            : "Open Virtual Keyboard"}
+          {keyboardState.isOpen ? "Close Keyboard" : "Open Keyboard"}
         </p>
         <DownArrow
-          onClick={keyboardState.toggle.bind(keyboardState)}
           style={{
             transform: keyboardState.isOpen ? "rotate(0deg)" : "rotate(180deg)",
           }}
