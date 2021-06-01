@@ -12,3 +12,11 @@ body {
 .transition-bg {
   transition: background 0.5s;
 }
+
+.simple-keyboard.hg-layout-default .hg-button.hg-red {
+  background: #e3342f;
+}
+
+.simple-keyboard.hg-layout-default .hg-button.hg-blue {
+  background: #3490dc;
+}
