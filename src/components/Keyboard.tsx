@@ -2,8 +2,12 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import SimpleKeyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
+import clsx from "clsx";
 
+import { ReactComponent as DownArrow } from "../svg/arrow.svg";
 import { guessState } from "../state/guessState";
+import { keyboardState } from "../state/keyboardState";
+import { themeState } from "../state/themeState";
 
 const Keyboard = () => {
   const onKeyPress = (button: any) => {
@@ -35,6 +39,14 @@ const Keyboard = () => {
             "Z X C V B N M",
           ],
         }}
+      />
+      <DownArrow
+        onClick={keyboardState.toggle.bind(keyboardState)}
+        className={clsx(
+          `mx-auto mt-4 w-4 md:w-6 h-auto cursor-pointer`,
+          { "arrow-blue-dark": themeState.theme === "light" },
+          { "arrow-orange": themeState.theme === "dark" }
+        )}
       />
     </div>
   );

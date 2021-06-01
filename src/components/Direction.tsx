@@ -7,8 +7,10 @@ import { themeState } from "../state/themeState";
 import { keyboardState } from "../state/keyboardState";
 
 const Direction = () => {
+  if (keyboardState.isOpen) return null;
+
   return (
-    <div className="flex flex-col items-center justify-center fixed bottom-0 inset-x-0 mb-12 md:mb-4">
+    <div className="flex flex-col items-center justify-center fixed bottom-0 inset-x-0 mb-20 md:mb-4">
       <div
         className="flex flex-col items-center justify-center cursor-pointer"
         onClick={keyboardState.toggle.bind(keyboardState)}
@@ -20,12 +22,10 @@ const Direction = () => {
             { "text-white": themeState.theme === "dark" }
           )}
         >
-          {keyboardState.isOpen ? "Close Keyboard" : "Open Keyboard"}
+          Open Keyboard
         </p>
         <DownArrow
-          style={{
-            transform: keyboardState.isOpen ? "rotate(0deg)" : "rotate(180deg)",
-          }}
+          style={{ transform: "rotate(180deg)" }}
           className={clsx(
             `w-4 md:w-6 h-auto cursor-pointer`,
             { "arrow-blue-dark": themeState.theme === "light" },

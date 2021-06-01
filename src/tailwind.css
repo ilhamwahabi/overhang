@@ -841,12 +841,21 @@ video {
   margin-right: 1rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-5 {
@@ -857,12 +866,12 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .opacity-75 {
