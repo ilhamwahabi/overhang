@@ -16,7 +16,7 @@ const Field = ({ isSpace, letter }: { isSpace: boolean; letter: string }) => {
     <div
       className={clsx(
         `
-          leading-regular
+          cursor-default leading-regular
           text-xl md:text-4xl lg:text-5xl
           w-3 h-8 md:w-8 md:h-16 lg:w-16 lg:h-16
           mx-2 md:mx-3 lg:mx-4 mb-10

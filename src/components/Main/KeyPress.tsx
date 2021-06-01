@@ -44,7 +44,7 @@ const KeyPress = () => {
       return (
         <p
           className={clsx(
-            `text-base md:text-2xl h-16 md:h-24 lg:h-32 ${flexTextClass}`,
+            `cursor-default text-base md:text-2xl h-16 md:h-24 lg:h-32 ${flexTextClass}`,
             { "text-black": themeState.theme === "light" },
             { "text-white": themeState.theme === "dark" }
           )}

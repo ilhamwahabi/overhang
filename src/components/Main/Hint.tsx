@@ -18,7 +18,7 @@ const Hint = () => {
     >
       <h2
         className={clsx(
-          `text-3xl md:text-5xl tracking-wider leading-regular mb-16 md:mb-20`,
+          `cursor-default text-3xl md:text-5xl tracking-wider leading-regular mb-16 md:mb-20`,
           { "text-black": themeState.theme === "light" },
           { "text-white": themeState.theme === "dark" }
         )}

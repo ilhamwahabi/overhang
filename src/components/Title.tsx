@@ -8,7 +8,7 @@ const Title = () => {
   return (
     <h1
       className={clsx(
-        `text-2xl md:text-3xl p-4 fixed top-0 left-0 leading-regular`,
+        `cursor-default text-2xl md:text-3xl p-4 fixed top-0 left-0 leading-regular`,
         { "text-black": themeState.theme === "light" },
         { "text-white": themeState.theme === "dark" }
       )}
