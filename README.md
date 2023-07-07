@@ -1,4 +1,4 @@
-# Over Hangman
+# Overhang
 
 Web-based hangman game with extra features.
 
