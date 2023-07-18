@@ -16,11 +16,11 @@ const Footer = () => {
           { "text-white": themeState.theme === "dark" }
         )}
       >
-        <a href="https://iwgx.io/" target="_blank" rel="noopener noreferrer">
+        <a href="https://ilhamwahabi.com" target="_blank" rel="noopener noreferrer">
           &copy; 2019 Ilham Wahabi
         </a>
         <a
-          href="https://github.com/iwgx/over-hangman"
+          href="https://github.com/ilhamwahabi/overhang"
           target="_blank"
           rel="noopener noreferrer"
           className="ml-2 lg:ml-3"
